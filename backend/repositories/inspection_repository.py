@@ -8,10 +8,10 @@ class InspectionRepository:
         db_request = InspectionRequest(
             id=str(uuid.uuid4()),
             car_id=request.car_id,
-            user_name=request.user_name,
-            user_email=request.user_email,
-            user_phone=request.user_phone,
-            notes=request.notes
+            name=request.name,
+            email=request.email,
+            phone=request.phone,
+            message=request.message
         )
         db.add(db_request)
         db.commit()

@@ -31,10 +31,10 @@ class ModelResponse(BaseModel):
 
 class InspectionCreate(BaseModel):
     car_id: str
-    user_name: str
-    user_email: str
-    user_phone: str
-    notes: Optional[str] = None
+    name: str
+    email: str
+    phone: str
+    message: Optional[str] = None
 
 class InspectionResponse(BaseModel):
     id: str
