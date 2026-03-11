@@ -8,10 +8,10 @@ class InspectionRequest(Base):
 
     id = Column(String, primary_key=True, index=True)
     car_id = Column(String, ForeignKey("cars.id"))
-    user_name = Column(String)
-    user_email = Column(String)
-    user_phone = Column(String)
-    notes = Column(String)
+    name = Column(String)
+    email = Column(String)
+    phone = Column(String)
+    message = Column(String)
     status = Column(String, default="PENDING")
     created_at = Column(DateTime(timezone=True), server_default=func.now())
     
