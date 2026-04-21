@@ -1,68 +1,121 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@theme {
+  /* Premium Color Palette */
+  --color-primary-50: #f8fafc;
+  --color-primary-100: #f1f5f9;
+  --color-primary-200: #e2e8f0;
+  --color-primary-300: #cbd5e1;
+  --color-primary-400: #94a3b8;
+  --color-primary-500: #64748b;
+  --color-primary-600: #475569;
+  --color-primary-700: #334155;
+  --color-primary-800: #1e293b;
+  --color-primary-900: #0f172a;
+  --color-primary-950: #020617;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  --color-accent-50: #fff1f2;
+  --color-accent-100: #ffe4e6;
+  --color-accent-200: #fecdd3;
+  --color-accent-300: #fda4af;
+  --color-accent-400: #fb7185;
+  --color-accent-500: #f43f5e;
+  --color-accent-600: #e11d48;
+  --color-accent-700: #be123c;
+  --color-accent-800: #9f1239;
+  --color-accent-900: #881337;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+  /* Modern Typography */
+  --font-sans: "Inter", "system-ui", "sans-serif";
+  --font-display: "Inter", "system-ui", "sans-serif";
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+  /* High-End Shadows */
+  --shadow-premium: 0 10px 30px -10px rgba(0, 0, 0, 0.08), 0 4px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-premium-hover: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  /* Radius */
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  body {
+    @apply bg-[#fcfcfd] text-slate-900 font-sans font-normal leading-relaxed selection:bg-accent-100 selection:text-accent-900 transition-colors duration-300;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.01em;
   }
-  a:hover {
-    color: #747bff;
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold tracking-tight text-slate-900 transition-colors duration-300;
+    letter-spacing: -0.03em;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/40 shadow-glass;
+  }
+  
+  .premium-card {
+    @apply rounded-[2rem] shadow-premium hover:shadow-premium-hover transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] border border-slate-100/50;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-2xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 transform active:scale-95 cursor-pointer uppercase tracking-widest text-[10px];
+  }
+  
+  .btn-primary {
+    @apply bg-slate-900 text-white hover:bg-slate-800 shadow-md hover:shadow-xl hover:-translate-y-0.5;
+  }
+  
+  .btn-accent {
+    @apply bg-accent-600 text-white hover:bg-accent-700 shadow-md hover:shadow-accent-500/20 hover:-translate-y-0.5;
+  }
+  
+  .badge-premium {
+    @apply px-3 py-1.5 rounded-xl text-[10px] font-bold uppercase tracking-[0.15em] flex items-center gap-1.5 transition-all duration-300;
+  }
+
+  .input-premium {
+    @apply w-full bg-white border border-slate-200 rounded-2xl px-5 py-3.5 text-slate-800 focus:ring-4 focus:ring-accent-500/10 focus:border-accent-500 transition-all duration-300 shadow-sm outline-none;
+  }
+
+  /* Robust Car Image Styling */
+  .car-image-container {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    position: relative;
+    background-color: #f8fafc;
+    border-radius: inherit;
+  }
+
+  .car-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.2, 0, 0, 1);
+  }
+}
+
+@layer utilities {
+  .animate-reveal {
+    animation: reveal 0.8s cubic-bezier(0.2, 0, 0, 1) forwards;
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(30px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 }

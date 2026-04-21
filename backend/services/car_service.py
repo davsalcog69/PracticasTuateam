@@ -17,3 +17,13 @@ class CarService:
             "total_results": total,
             "cars": cars
         }
+
+    def get_exported_cars(self, db: Session, skip: int = 0, limit: int = 100):
+        cars = self.repository.get_exported_cars(db, skip, limit)
+        for car in cars:
+            print(f"[IMG] {car.model} → {len(car.images)} imágenes")
+        total = self.repository.count_exported_cars(db)
+        return {
+            "total": total,
+            "cars": cars
+        }

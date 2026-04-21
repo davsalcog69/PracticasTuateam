@@ -5,3 +5,9 @@ psycopg2-binary
 requests
 beautifulsoup4
 python-dotenv
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+pydantic-settings
+selenium
+selenium-stealth
