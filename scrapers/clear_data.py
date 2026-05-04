@@ -29,7 +29,10 @@ def clear_test_data():
         try:
             print("[INFO] Limpiando tabla 'car_export'...")
             session.execute(text("DELETE FROM car_export"))
-        except: pass
+            session.commit()
+        except Exception as e:
+            session.rollback()
+            print(f"[WARNING] No se pudo limpiar 'car_export': {e}")
         
         # Luego borramos los coches
         try:

@@ -47,6 +47,10 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             <option value="Vito">Mercedes-Benz Vito</option>
             <option value="Sprinter">Mercedes-Benz Sprinter</option>
             <option value="Citan">Mercedes-Benz Citan</option>
+            <option value="Serie 3">BMW Serie 3</option>
+            <option value="A4">Audi A4</option>
+            <option value="Golf GTI">VW Golf GTI</option>
+            <option value="Golf R">VW Golf R</option>
           </select>
         </div>
 
@@ -73,10 +77,12 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             value={minYear}
             onChange={(e) => onYearChange(Number(e.target.value))}
           >
+            <option value="2019">2019+</option>
+            <option value="2020">2020+</option>
+            <option value="2021">2021+</option>
+            <option value="2022">2022+</option>
             <option value="2023">2023+</option>
             <option value="2024">2024+</option>
-            <option value="2025">2025+</option>
-            <option value="2026">2026+</option>
           </select>
         </div>
 

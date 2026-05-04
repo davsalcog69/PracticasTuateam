@@ -16,6 +16,17 @@ export const CarCard: React.FC<CarCardProps> = ({ car, onClick, isFavorite, onTo
 
   const profit = Math.round(car.estimated_profit || 0);
   const isProfitable = profit > 0;
+  const status = car.vehicle_status || 'Gebrauchtfahrzeug';
+  const statusCheck = car.vehicle_status_check || 'OK';
+
+  const getStatusColor = (s: string) => {
+    switch (s.toLowerCase()) {
+      case 'ok': return 'bg-emerald-500 text-white shadow-emerald-200';
+      case 'dudoso': return 'bg-amber-500 text-white shadow-amber-200';
+      case 'descartado': return 'bg-red-500 text-white shadow-red-200';
+      default: return 'bg-emerald-500 text-white shadow-emerald-200';
+    }
+  };
 
   return (
     <div 
@@ -78,6 +89,13 @@ export const CarCard: React.FC<CarCardProps> = ({ car, onClick, isFavorite, onTo
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
             </svg>
             {car.location || car.country}
+          </div>
+        </div>
+
+        {/* Vehicle Status Badge */}
+        <div className="absolute bottom-4 right-4 z-10 max-w-[50%]">
+          <div className={`px-3 py-1.5 rounded-xl text-[10px] font-bold uppercase tracking-wider shadow-lg backdrop-blur-md truncate ${getStatusColor(statusCheck)}`} title={status}>
+            {statusCheck}
           </div>
         </div>
       </div>

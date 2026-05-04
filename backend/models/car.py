@@ -11,6 +11,8 @@ class Car(Base):
     brand = Column(String)
     model = Column(String)
     version = Column(String)
+    vehicle_status = Column(String, nullable=False, default="Dudoso")
+    vehicle_status_check = Column(String, nullable=False, default="Dudoso")
 
     year = Column(Integer)
     kilometrage = Column(Integer)

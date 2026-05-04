@@ -151,7 +151,7 @@ export const Marketplace: React.FC = () => {
               <div className="space-y-4">
                 <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Modelo</label>
                 <div className="grid grid-cols-2 gap-2">
-                  {['all', 'Vito', 'Sprinter', 'Citan'].map((model) => (
+                  {['all', 'Vito', 'Sprinter', 'Citan', 'Serie 3', 'A4', 'Golf GTI', 'Golf R'].map((model) => (
                     <button
                       key={model}
                       onClick={() => setSelectedModel(model)}

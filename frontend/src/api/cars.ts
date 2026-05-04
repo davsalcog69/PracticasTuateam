@@ -3,6 +3,8 @@ export interface CarExport {
   portal: string;
   brand: string;
   model: string;
+  vehicle_status: string;
+  vehicle_status_check?: string;
   year: number;
   mileage: number;
   fuel: string;

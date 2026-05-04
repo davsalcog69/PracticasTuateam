@@ -18,7 +18,7 @@ export const CarDetailModal: React.FC<CarDetailModalProps> = ({ car, onClose }) 
     : ['https://via.placeholder.com/400x300?text=No+Image'];
 
   return (
-    <div className="fixed inset-0 z-[999] flex items-center justify-center p-0 sm:p-4 md:p-8 lg:p-12 overflow-hidden transition-all duration-500">
+    <div className="fixed inset-0 z-[1100] flex items-center justify-center p-0 sm:p-4 md:p-8 lg:p-12 overflow-hidden transition-all duration-500">
       {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-slate-950/80 backdrop-blur-xl transition-opacity animate-in duration-500" 
@@ -28,6 +28,17 @@ export const CarDetailModal: React.FC<CarDetailModalProps> = ({ car, onClose }) 
       {/* Modal Container */}
       <div className="bg-white w-full max-w-7xl h-full md:h-auto md:max-h-[95vh] md:rounded-[2rem] shadow-2xl relative z-10 flex flex-col overflow-hidden border border-slate-200 animate-in transition-colors duration-300">
         
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-5 right-5 z-50 w-10 h-10 flex items-center justify-center rounded-2xl bg-white/80 backdrop-blur-md border border-slate-200 text-slate-500 hover:text-slate-900 hover:bg-white hover:shadow-md transition-all duration-300"
+          aria-label="Cerrar"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
         {/* Main Content Area (Two Columns) */}
         <div className="flex flex-col lg:flex-row flex-1 overflow-y-auto no-scrollbar">
           
@@ -102,7 +113,15 @@ export const CarDetailModal: React.FC<CarDetailModalProps> = ({ car, onClose }) 
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <span className="px-2 py-0.5 rounded-lg bg-slate-100 text-slate-500 text-[9px] font-bold uppercase tracking-widest border border-slate-200">EXP-{(car.id || '').substring(0,6)}</span>
-                  <span className="px-2 py-0.5 rounded-lg bg-primary-50 text-primary-600 text-[9px] font-bold uppercase tracking-widest border border-primary-100 font-semibold italic">Verificado</span>
+                  <span className={`px-2 py-0.5 rounded-lg text-[9px] font-bold uppercase tracking-widest border font-semibold italic max-w-full truncate ${
+                    (car.vehicle_status_check || '').toLowerCase() === 'ok' 
+                    ? 'bg-emerald-50 text-emerald-600 border-emerald-100' 
+                    : (car.vehicle_status_check || '').toLowerCase() === 'dudoso'
+                    ? 'bg-amber-50 text-amber-600 border-amber-100'
+                    : 'bg-emerald-50 text-emerald-600 border-emerald-100'
+                  }`} title={car.vehicle_status || 'Gebrauchtfahrzeug'}>
+                    {car.vehicle_status || 'Gebrauchtfahrzeug'}
+                  </span>
                 </div>
                 <div>
                   <h2 className="text-3xl font-semibold tracking-tight text-slate-900 leading-tight">

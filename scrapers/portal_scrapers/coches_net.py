@@ -30,6 +30,47 @@ STATE_FILE = "scraper_state.json"
 BASE_URL = "https://www.coches.net"
 PAGE_URL_TEMPLATE = "https://www.coches.net/segunda-mano/?pg={page}&st=1"
 
+# LISTA NEGRA COMPLETA DE ACCIDENTES Y DAÑOS
+ACCIDENT_KEYWORDS = [
+    # ACCIDENTES (DIRECTO)
+    r'unfall', r'unfallschaden', r'unfallfahrzeug', r'schwerer unfall', r'totalschaden', r'unfallwagen', 
+    r'frontschaden', r'heckschaden', r'seitenschaden',
+    r'accidente', r'siniestro', r'coche accidentado', r'golpe frontal', r'golpe trasero', r'golpe lateral', r'siniestro total',
+    r'accident', r'accident damage', r'total loss', r'crash damage', r'front damage', r'rear damage', r'side damage',
+    
+    # DAÑOS GENERALES
+    r'beschädigt', r'schaden', r'vorschaden', r'altschaden', r'beschädigungen', r'mängel',
+    r'dañado', r'daños', r'daños previos', r'defectos', r'desperfectos',
+    r'damaged', r'damage', r'previous damage', r'defects', r'issues',
+    
+    # DAÑOS MECÁNICOS
+    r'motorschaden', r'getriebeschaden', r'turboschaden', r'kupplung defekt', r'motor defekt', r'getriebe defekt',
+    r'nicht fahrbereit', r'bedingt fahrbereit',
+    r'motor roto', r'avería', r'caja de cambios rota', r'embrague roto', r'no arranca', r'no funciona', r'no circula',
+    r'engine damage', r'engine failure', r'gearbox damage', r'transmission issue', r'not working', r'not drivable', r'broken',
+    
+    # COCHES PROBLEMÁTICOS
+    r'bastlerfahrzeug', r'exportfahrzeug', r'händlerexport', r'ohne garantie', r'nur für export', r'zum ausschlachten',
+    r'para piezas', r'para exportación', r'sin garantía', r'solo exportación', r'para desguace',
+    r'for parts', r'export only', r'no warranty', r'salvage', r'scrap',
+    
+    # REPARACIONES / SOSPECHOSO
+    r'repariert', r'instandgesetzt', r'nachlackiert', r'neu lackiert', r'lackschaden', r'karosserieschaden', 
+    r'rahmenschaden', r'instandsetzung',
+    r'reparado', r'repintado', r'pintura nueva', r'daño de carrocería', r'daño estructural',
+    r'repaired', r'repainted', r'body repair', r'frame damage', r'structural damage',
+    
+    # DESGASTE / ESTADO MALO
+    r'stark gebraucht', r'verschlissen', r'abgenutzt', r'gebrauchsspuren', r'starke gebrauchsspuren',
+    r'muy usado', r'desgastado', r'desgaste alto', r'marcas de uso',
+    r'heavily used', r'worn', r'wear and tear', r'signs of use',
+    
+    # EXPRESIONES ENGAÑOSAS
+    r'leichte mängel', r'optische mängel', r'kleine schäden', r'altersbedingt', r'dem alter entsprechend',
+    r'pequeños defectos', r'detalles estéticos', r'acorde a la edad', r'desgaste normal',
+    r'minor defects', r'cosmetic issues', r'age related', r'small issues'
+]
+
 # Professional Logging
 logging.basicConfig(
     level=logging.INFO,
@@ -114,22 +155,46 @@ class CochesNetScraper(BaseScraper):
             brand = (item.get('makeTitle') or item.get('make') or 'Desconocido').strip()
             model = (item.get('modelTitle') or item.get('model') or 'Desconocido').strip()
             
-            # --- STRICT FILTERING FOR MERCEDES VITO/SPRINTER/CITAN ---
+            # --- STRICT FILTERING FOR PREMIUM & VAN MODELS ---
             brand_lower = brand.lower()
             model_lower = model.lower()
+            title_lower = (item.get('title') or '').lower()
             
-            is_mercedes = "mercedes" in brand_lower
-            target_models = ["vito", "sprinter", "citan"]
-            is_target_model = any(m in model_lower for m in target_models)
-            
-            if not is_mercedes or not is_target_model:
+            # Canonical Mapping
+            if "bmw" in brand_lower and ("serie 3" in model_lower or "3er" in model_lower or "320" in model_lower or "330" in model_lower or "m340" in model_lower):
+                brand = "BMW"
+                model = "Serie 3"
+            elif "audi" in brand_lower and "a4" in model_lower:
+                brand = "Audi"
+                model = "A4"
+            elif "volkswagen" in brand_lower and "golf" in model_lower:
+                brand = "Volkswagen"
+                if "gti" in title_lower or "gti" in model_lower:
+                    model = "Golf GTI"
+                elif " r " in f" {title_lower} " or " r " in f" {model_lower} " or "20 jahre" in title_lower:
+                    model = "Golf R"
+                else:
+                    return None
+            elif "mercedes" in brand_lower:
+                brand = "Mercedes"
+                if "vito" in model_lower: model = "Vito"
+                elif "sprinter" in model_lower: model = "Sprinter"
+                elif "citan" in model_lower: model = "Citan"
+                else: return None
+            else:
                 return None
+
+            # --- DETERMINACIÓN DEL ESTADO DEL VEHÍCULO (CRÍTICO) ---
+            vehicle_status = "Dudoso" # Por defecto en coches.net ya que no tienen el badge unfallfrei tan claro
             
-            # Canonical Names
-            brand = "Mercedes"
-            if "vito" in model_lower: model = "Vito"
-            elif "sprinter" in model_lower: model = "Sprinter"
-            elif "citan" in model_lower: model = "Citan"
+            # Si el anuncio menciona cualquier palabra de daño, marcar como DESCARTADO
+            if any(re.search(kw, title_lower) for kw in ACCIDENT_KEYWORDS):
+                logger.info(f"MARCADO COMO DESCARTADO (Coches.net): Daño detectado en {title_lower}")
+                vehicle_status = "Descartado"
+            elif "perfecto estado" in title_lower or "impecable" in title_lower:
+                vehicle_status = "Sin accidentes"
+            else:
+                vehicle_status = "Dudoso"
 
             props = item.get('attributes', [])
             attrs = {a['name']: a['value'] for a in props if 'name' in a} if isinstance(props, list) else (props or {})
@@ -143,9 +208,11 @@ class CochesNetScraper(BaseScraper):
                 "year": int(item.get('year', 0)),
             }
             
-            # STRICT 2023+ FILTER
-            if ad["year"] < 2023:
-                return None
+            # STRICT YEAR FILTERING based on target models
+            if model == "Serie 3" and not (2019 <= ad["year"] <= 2022): return None
+            if model == "A4" and not (2019 <= ad["year"] <= 2022): return None
+            if "Golf" in model and not (2020 <= ad["year"] <= 2023): return None
+            if model in ["Vito", "Sprinter", "Citan"] and ad["year"] < 2023: return None
 
             ad.update({
                 "mileage": int(item.get('km', 0)),
@@ -155,6 +222,7 @@ class CochesNetScraper(BaseScraper):
                 "currency": "EUR",
                 "country": "España",
                 "location": location,
+                "vehicle_status": vehicle_status,
                 "url": item.get('url', ''),
                 "source_url": item.get('url', ''),
                 "images": [item.get('mainImage')] if item.get('mainImage') else []
@@ -316,11 +384,15 @@ class CochesNetScraper(BaseScraper):
         # Reset state for quick test mode
         self._save_state(0)
         
-        # Target URLs for specific models with strict 2023+ filter
+        # Target URLs for specific models with strict filters
         queries = {
             "Vito": "https://www.coches.net/mercedes-benz/vito/segunda-mano/?pg={page}&MinYear=2023",
             "Sprinter": "https://www.coches.net/mercedes-benz/sprinter/segunda-mano/?pg={page}&MinYear=2023",
-            "Citan": "https://www.coches.net/mercedes-benz/citan/segunda-mano/?pg={page}&MinYear=2023"
+            "Citan": "https://www.coches.net/mercedes-benz/citan/segunda-mano/?pg={page}&MinYear=2023",
+            "Serie 3": "https://www.coches.net/bmw/serie_3/segunda-mano/?pg={page}&MinYear=2019&MaxYear=2022&MaxKms=80000",
+            "A4": "https://www.coches.net/audi/a4/segunda-mano/?pg={page}&MinYear=2019&MaxYear=2022&MaxKms=75000",
+            "Golf GTI": "https://www.coches.net/volkswagen/golf/segunda-mano/?pg={page}&MinYear=2020&MaxYear=2023&MaxKms=60000",
+            "Golf R": "https://www.coches.net/volkswagen/golf/segunda-mano/?pg={page}&MinYear=2020&MaxYear=2023&MaxKms=60000"
         }
 
         async with async_playwright() as p:
@@ -366,10 +438,12 @@ class CochesNetScraper(BaseScraper):
                             
                             logger.info(f"[{self.worker_id}] [INFO] Página cargada correctamente")
                             logger.info(f"[{self.worker_id}] [INFO] Coches encontrados: {found_count}")
-                            logger.info(f"[{self.worker_id}] [INFO] Filtrados por año >= 2023: {len(processed_items)}")
+                            logger.info(f"[{self.worker_id}] [INFO] Filtrados y validados: {len(processed_items)}")
 
+                            # Map the model mapped names back to the pipeline keys
                             for ad in processed_items:
                                 pipeline.process_item(ad)
+                                
                                 if pipeline.counts[model_name] >= pipeline.target_count:
                                     break
                     except Exception as e:

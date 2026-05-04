@@ -4,7 +4,7 @@ from models.car import Car, CarPriceHistory
 class CarRepository:
     def get_all_cars(self, db: Session, skip: int = 0, limit: int = 100):
         return db.query(Car)\
-            .filter(Car.portal == "mobile.de", Car.year >= 2023, Car.year <= 2026)\
+            .filter(Car.portal == "mobile.de", Car.year >= 2019, Car.year <= 2026)\
             .offset(skip).limit(limit).all()
 
     def get_cars_by_model(self, db: Session, brand: str, model: str):
@@ -13,7 +13,7 @@ class CarRepository:
                 Car.brand.ilike(f"%{brand}%"), 
                 Car.model.ilike(f"%{model}%"),
                 Car.portal == "mobile.de",
-                Car.year >= 2023,
+                Car.year >= 2019,
                 Car.year <= 2026
             ).all()
 
@@ -22,7 +22,7 @@ class CarRepository:
             Car.brand.ilike(f"%{brand}%"), 
             Car.model.ilike(f"%{model}%"),
             Car.portal == "mobile.de",
-            Car.year >= 2023,
+            Car.year >= 2019,
             Car.year <= 2026
         ).count()
 
@@ -54,14 +54,14 @@ class CarRepository:
 
     def get_mobile_de_cars(self, db: Session):
         return db.query(Car)\
-            .filter(Car.portal == "mobile.de", Car.year >= 2023, Car.year <= 2026).all()
+            .filter(Car.portal == "mobile.de", Car.year >= 2019, Car.year <= 2026).all()
 
     def get_exported_cars(self, db: Session, skip: int = 0, limit: int = 100):
         from models.car_export import CarExport
         return db.query(CarExport)\
-            .filter(CarExport.year >= 2023, CarExport.year <= 2026)\
+            .filter(CarExport.year >= 2019, CarExport.year <= 2026)\
             .offset(skip).limit(limit).all()
 
     def count_exported_cars(self, db: Session):
         from models.car_export import CarExport
-        return db.query(CarExport).filter(CarExport.year >= 2023, CarExport.year <= 2026).count()
+        return db.query(CarExport).filter(CarExport.year >= 2019, CarExport.year <= 2026).count()

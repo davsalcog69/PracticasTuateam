@@ -1,0 +1,2546 @@
+[
+  {
+    "elements": [
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Más filtros\nEstado\nTodo\ncambiar\nMarca, modelo, versión\nBMW 320\ncambiar\nPrecio\nTodo\n500 €\n1.000 €\n1.500 €\n2.000 €\n2.500 €\n3.000 €\n3.500 €\n4.000 €\n4.500 €\n5.000 €\n6.000 €\n7.000 €\n8.000 €\n9.000 €\n10.000 "
+      },
+      {
+        "class": "shared_filtersMobile__oStid",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Más filtros\nEstado\nTodo\ncambiar\nMarca, modelo, versión\nBMW 320\ncambiar\nPrecio\nTodo\n500 €\n1.000 €\n1.500 €\n2.000 €\n2.500 €\n3.000 €\n3.500 €\n4.000 €\n4.500 €\n5.000 €\n6.000 €\n7.000 €\n8.000 €\n9.000 €\n10.000 "
+      },
+      {
+        "class": "button_Button__wrap__gQpnZ align_align-flex-center__dFYeb",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "Más filtros"
+      },
+      {
+        "class": "button_Button__label__OceSI",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "Más filtros"
+      },
+      {
+        "class": "margin_bottom_S__TFBBj",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Estado\nTodo\ncambiar"
+      },
+      {
+        "class": "SearchFilterWithModal_valueRow__GpwUJ",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\ncambiar"
+      },
+      {
+        "class": "FilterValueLabel_valueLabel__2_f3o",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "SingleSelectFilterValueLabel_filterValueLabel__fGTUB",
+        "tag": "LI",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "SearchFilterWithModal_changeLabel__mVxiN",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "cambiar"
+      },
+      {
+        "class": "margin_bottom_S__TFBBj",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Marca, modelo, versión\nBMW 320\ncambiar"
+      },
+      {
+        "class": "SearchFilterWithModal_valueRow__GpwUJ",
+        "tag": "DIV",
+        "testid": "",
+        "text": "BMW 320\ncambiar"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "BMW 320"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "BMW 320"
+      },
+      {
+        "class": "SearchFilterWithModal_changeLabel__mVxiN",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "cambiar"
+      },
+      {
+        "class": "shared_miniSearch__tLxuN",
+        "tag": "DIV",
+        "testid": "car-mini-search",
+        "text": "Precio\nTodo\n500 €\n1.000 €\n1.500 €\n2.000 €\n2.500 €\n3.000 €\n3.500 €\n4.000 €\n4.500 €\n5.000 €\n6.000 €\n7.000 €\n8.000 €\n9.000 €\n10.000 €\n11.000 €\n12.000 €\n13.000 €\n14.000 €\n15.000 €\n17.500 €\n20.000 €\n22.500"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Precio\nTodo\n500 €\n1.000 €\n1.500 €\n2.000 €\n2.500 €\n3.000 €\n3.500 €\n4.000 €\n4.500 €\n5.000 €\n6.000 €\n7.000 €\n8.000 €\n9.000 €\n10.000 €\n11.000 €\n12.000 €\n13.000 €\n14.000 €\n15.000 €\n17.500 €\n20.000 €\n22.500"
+      },
+      {
+        "class": "flexBox_FlexBox__e6o0k",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n500 €\n1.000 €\n1.500 €\n2.000 €\n2.500 €\n3.000 €\n3.500 €\n4.000 €\n4.500 €\n5.000 €\n6.000 €\n7.000 €\n8.000 €\n9.000 €\n10.000 €\n11.000 €\n12.000 €\n13.000 €\n14.000 €\n15.000 €\n17.500 €\n20.000 €\n22.500 €\n25.0"
+      },
+      {
+        "class": "flexbox_flex1__bzMha",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n500 €\n1.000 €\n1.500 €\n2.000 €\n2.500 €\n3.000 €\n3.500 €\n4.000 €\n4.500 €\n5.000 €\n6.000 €\n7.000 €\n8.000 €\n9.000 €\n10.000 €\n11.000 €\n12.000 €\n13.000 €\n14.000 €\n15.000 €\n17.500 €\n20.000 €\n22.500 €\n25.0"
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n500 €\n1.000 €\n1.500 €\n2.000 €\n2.500 €\n3.000 €\n3.500 €\n4.000 €\n4.500 €\n5.000 €\n6.000 €\n7.000 €\n8.000 €\n9.000 €\n10.000 €\n11.000 €\n12.000 €\n13.000 €\n14.000 €\n15.000 €\n17.500 €\n20.000 €\n22.500 €\n25.0"
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av comboBox_wrap__1MlSN",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n500 €\n1.000 €\n1.500 €\n2.000 €\n2.500 €\n3.000 €\n3.500 €\n4.000 €\n4.500 €\n5.000 €\n6.000 €\n7.000 €\n8.000 €\n9.000 €\n10.000 €\n11.000 €\n12.000 €\n13.000 €\n14.000 €\n15.000 €\n17.500 €\n20.000 €\n22.500 €\n25.0"
+      },
+      {
+        "class": "comboBox_input__yvz2a comboBox_input--small__FoyqA baseInput_BaseInput-container",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "comboBox_select__S_R0A comboBox_select--small__u8jmV",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n500 €\n1.000 €\n1.500 €\n2.000 €\n2.500 €\n3.000 €\n3.500 €\n4.000 €\n4.500 €\n5.000 €\n6.000 €\n7.000 €\n8.000 €\n9.000 €\n10.000 €\n11.000 €\n12.000 €\n13.000 €\n14.000 €\n15.000 €\n17.500 €\n20.000 €\n22.500 €\n25.0"
+      },
+      {
+        "class": "flexbox_flex1__bzMha margin_left_M__lDq4O",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n500 €\n1.000 €\n1.500 €\n2.000 €\n2.500 €\n3.000 €\n3.500 €\n4.000 €\n4.500 €\n5.000 €\n6.000 €\n7.000 €\n8.000 €\n9.000 €\n10.000 €\n11.000 €\n12.000 €\n13.000 €\n14.000 €\n15.000 €\n17.500 €\n20.000 €\n22.500 €\n25.0"
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n500 €\n1.000 €\n1.500 €\n2.000 €\n2.500 €\n3.000 €\n3.500 €\n4.000 €\n4.500 €\n5.000 €\n6.000 €\n7.000 €\n8.000 €\n9.000 €\n10.000 €\n11.000 €\n12.000 €\n13.000 €\n14.000 €\n15.000 €\n17.500 €\n20.000 €\n22.500 €\n25.0"
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av comboBox_wrap__1MlSN",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n500 €\n1.000 €\n1.500 €\n2.000 €\n2.500 €\n3.000 €\n3.500 €\n4.000 €\n4.500 €\n5.000 €\n6.000 €\n7.000 €\n8.000 €\n9.000 €\n10.000 €\n11.000 €\n12.000 €\n13.000 €\n14.000 €\n15.000 €\n17.500 €\n20.000 €\n22.500 €\n25.0"
+      },
+      {
+        "class": "comboBox_input__yvz2a comboBox_input--small__FoyqA baseInput_BaseInput-container",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "comboBox_select__S_R0A comboBox_select--small__u8jmV",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n500 €\n1.000 €\n1.500 €\n2.000 €\n2.500 €\n3.000 €\n3.500 €\n4.000 €\n4.500 €\n5.000 €\n6.000 €\n7.000 €\n8.000 €\n9.000 €\n10.000 €\n11.000 €\n12.000 €\n13.000 €\n14.000 €\n15.000 €\n17.500 €\n20.000 €\n22.500 €\n25.0"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Primera matriculación\nTodo\n2026\n2025\n2024\n2023\n2022\n2021\n2020\n2019\n2018\n2017\n2016\n2015\n2014\n2013\n2012\n2011\n2010\n2009\n2008\n2007\n2006\n2005\n2004\n2003\n2002\n2001\n2000\n1999\n1998\n1997\n1996\n1995\n1994\n1993\n199"
+      },
+      {
+        "class": "flexBox_FlexBox__e6o0k",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n2026\n2025\n2024\n2023\n2022\n2021\n2020\n2019\n2018\n2017\n2016\n2015\n2014\n2013\n2012\n2011\n2010\n2009\n2008\n2007\n2006\n2005\n2004\n2003\n2002\n2001\n2000\n1999\n1998\n1997\n1996\n1995\n1994\n1993\n1992\n1991\n1990\n1985\n1980\n"
+      },
+      {
+        "class": "flexbox_flex1__bzMha",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n2026\n2025\n2024\n2023\n2022\n2021\n2020\n2019\n2018\n2017\n2016\n2015\n2014\n2013\n2012\n2011\n2010\n2009\n2008\n2007\n2006\n2005\n2004\n2003\n2002\n2001\n2000\n1999\n1998\n1997\n1996\n1995\n1994\n1993\n1992\n1991\n1990\n1985\n1980\n"
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n2026\n2025\n2024\n2023\n2022\n2021\n2020\n2019\n2018\n2017\n2016\n2015\n2014\n2013\n2012\n2011\n2010\n2009\n2008\n2007\n2006\n2005\n2004\n2003\n2002\n2001\n2000\n1999\n1998\n1997\n1996\n1995\n1994\n1993\n1992\n1991\n1990\n1985\n1980\n"
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av comboBox_wrap__1MlSN",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n2026\n2025\n2024\n2023\n2022\n2021\n2020\n2019\n2018\n2017\n2016\n2015\n2014\n2013\n2012\n2011\n2010\n2009\n2008\n2007\n2006\n2005\n2004\n2003\n2002\n2001\n2000\n1999\n1998\n1997\n1996\n1995\n1994\n1993\n1992\n1991\n1990\n1985\n1980\n"
+      },
+      {
+        "class": "comboBox_input__yvz2a comboBox_input--small__FoyqA baseInput_BaseInput-container",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "comboBox_select__S_R0A comboBox_select--small__u8jmV",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n2026\n2025\n2024\n2023\n2022\n2021\n2020\n2019\n2018\n2017\n2016\n2015\n2014\n2013\n2012\n2011\n2010\n2009\n2008\n2007\n2006\n2005\n2004\n2003\n2002\n2001\n2000\n1999\n1998\n1997\n1996\n1995\n1994\n1993\n1992\n1991\n1990\n1985\n1980\n"
+      },
+      {
+        "class": "flexbox_flex1__bzMha margin_left_M__lDq4O",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n2026\n2025\n2024\n2023\n2022\n2021\n2020\n2019\n2018\n2017\n2016\n2015\n2014\n2013\n2012\n2011\n2010\n2009\n2008\n2007\n2006\n2005\n2004\n2003\n2002\n2001\n2000\n1999\n1998\n1997\n1996\n1995\n1994\n1993\n1992\n1991\n1990\n1985\n1980\n"
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n2026\n2025\n2024\n2023\n2022\n2021\n2020\n2019\n2018\n2017\n2016\n2015\n2014\n2013\n2012\n2011\n2010\n2009\n2008\n2007\n2006\n2005\n2004\n2003\n2002\n2001\n2000\n1999\n1998\n1997\n1996\n1995\n1994\n1993\n1992\n1991\n1990\n1985\n1980\n"
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av comboBox_wrap__1MlSN",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n2026\n2025\n2024\n2023\n2022\n2021\n2020\n2019\n2018\n2017\n2016\n2015\n2014\n2013\n2012\n2011\n2010\n2009\n2008\n2007\n2006\n2005\n2004\n2003\n2002\n2001\n2000\n1999\n1998\n1997\n1996\n1995\n1994\n1993\n1992\n1991\n1990\n1985\n1980\n"
+      },
+      {
+        "class": "comboBox_input__yvz2a comboBox_input--small__FoyqA baseInput_BaseInput-container",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "comboBox_select__S_R0A comboBox_select--small__u8jmV",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n2026\n2025\n2024\n2023\n2022\n2021\n2020\n2019\n2018\n2017\n2016\n2015\n2014\n2013\n2012\n2011\n2010\n2009\n2008\n2007\n2006\n2005\n2004\n2003\n2002\n2001\n2000\n1999\n1998\n1997\n1996\n1995\n1994\n1993\n1992\n1991\n1990\n1985\n1980\n"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Kilometraje\nTodo\n5.000 km\n10.000 km\n20.000 km\n30.000 km\n40.000 km\n50.000 km\n60.000 km\n70.000 km\n80.000 km\n90.000 km\n100.000 km\n125.000 km\n150.000 km\n175.000 km\n200.000 km\nTodo\n5.000 km\n10.000 km\n20.00"
+      },
+      {
+        "class": "flexBox_FlexBox__e6o0k",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n5.000 km\n10.000 km\n20.000 km\n30.000 km\n40.000 km\n50.000 km\n60.000 km\n70.000 km\n80.000 km\n90.000 km\n100.000 km\n125.000 km\n150.000 km\n175.000 km\n200.000 km\nTodo\n5.000 km\n10.000 km\n20.000 km\n30.000 "
+      },
+      {
+        "class": "flexbox_flex1__bzMha",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n5.000 km\n10.000 km\n20.000 km\n30.000 km\n40.000 km\n50.000 km\n60.000 km\n70.000 km\n80.000 km\n90.000 km\n100.000 km\n125.000 km\n150.000 km\n175.000 km\n200.000 km"
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n5.000 km\n10.000 km\n20.000 km\n30.000 km\n40.000 km\n50.000 km\n60.000 km\n70.000 km\n80.000 km\n90.000 km\n100.000 km\n125.000 km\n150.000 km\n175.000 km\n200.000 km"
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av comboBox_wrap__1MlSN",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n5.000 km\n10.000 km\n20.000 km\n30.000 km\n40.000 km\n50.000 km\n60.000 km\n70.000 km\n80.000 km\n90.000 km\n100.000 km\n125.000 km\n150.000 km\n175.000 km\n200.000 km"
+      },
+      {
+        "class": "comboBox_input__yvz2a comboBox_input--small__FoyqA baseInput_BaseInput-container",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "comboBox_select__S_R0A comboBox_select--small__u8jmV",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n5.000 km\n10.000 km\n20.000 km\n30.000 km\n40.000 km\n50.000 km\n60.000 km\n70.000 km\n80.000 km\n90.000 km\n100.000 km\n125.000 km\n150.000 km\n175.000 km\n200.000 km"
+      },
+      {
+        "class": "flexbox_flex1__bzMha margin_left_M__lDq4O",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n5.000 km\n10.000 km\n20.000 km\n30.000 km\n40.000 km\n50.000 km\n60.000 km\n70.000 km\n80.000 km\n90.000 km\n100.000 km\n125.000 km\n150.000 km\n175.000 km\n200.000 km"
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n5.000 km\n10.000 km\n20.000 km\n30.000 km\n40.000 km\n50.000 km\n60.000 km\n70.000 km\n80.000 km\n90.000 km\n100.000 km\n125.000 km\n150.000 km\n175.000 km\n200.000 km"
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av comboBox_wrap__1MlSN",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n5.000 km\n10.000 km\n20.000 km\n30.000 km\n40.000 km\n50.000 km\n60.000 km\n70.000 km\n80.000 km\n90.000 km\n100.000 km\n125.000 km\n150.000 km\n175.000 km\n200.000 km"
+      },
+      {
+        "class": "comboBox_input__yvz2a comboBox_input--small__FoyqA baseInput_BaseInput-container",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "comboBox_select__S_R0A comboBox_select--small__u8jmV",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\n5.000 km\n10.000 km\n20.000 km\n30.000 km\n40.000 km\n50.000 km\n60.000 km\n70.000 km\n80.000 km\n90.000 km\n100.000 km\n125.000 km\n150.000 km\n175.000 km\n200.000 km"
+      },
+      {
+        "class": "button_Button__wrap__gQpnZ align_align-flex-center__dFYeb",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "11.910 Ofertas"
+      },
+      {
+        "class": "button_Button__label__OceSI",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "11.910 Ofertas"
+      },
+      {
+        "class": "",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "11.910 Ofertas"
+      },
+      {
+        "class": "",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "11.910"
+      },
+      {
+        "class": "",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "Guardar búsqueda"
+      },
+      {
+        "class": "margin_bottom_S__TFBBj",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Ubicación\nTodo\ncambiar"
+      },
+      {
+        "class": "SearchFilterWithModal_valueRow__GpwUJ",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\ncambiar"
+      },
+      {
+        "class": "FilterValueLabel_valueLabel__2_f3o",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "LocationFilterValueLabel_filterValueLabel__aUMB_",
+        "tag": "LI",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "SearchFilterWithModal_changeLabel__mVxiN",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "cambiar"
+      },
+      {
+        "class": "margin_bottom_S__TFBBj",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Tipo de combustible\nTodo\ncambiar"
+      },
+      {
+        "class": "SearchFilterWithModal_valueRow__GpwUJ",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\ncambiar"
+      },
+      {
+        "class": "FilterValueLabel_valueLabel__2_f3o",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "MultiSelectFilterValueLabel_filterValueLabel__kgLdG",
+        "tag": "LI",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "SearchFilterWithModal_changeLabel__mVxiN",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "cambiar"
+      },
+      {
+        "class": "margin_bottom_S__TFBBj",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Potencia\nTodo\ncambiar"
+      },
+      {
+        "class": "SearchFilterWithModal_valueRow__GpwUJ",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\ncambiar"
+      },
+      {
+        "class": "FilterValueLabel_valueLabel__2_f3o",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "RangeFilterValueLabel_filterValueLabel__xKXKM",
+        "tag": "LI",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "SearchFilterWithModal_changeLabel__mVxiN",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "cambiar"
+      },
+      {
+        "class": "margin_bottom_S__TFBBj",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Tipo de vehículo\nTodo\ncambiar"
+      },
+      {
+        "class": "SearchFilterWithModal_valueRow__GpwUJ",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\ncambiar"
+      },
+      {
+        "class": "FilterValueLabel_valueLabel__2_f3o",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "MultiSelectFilterValueLabel_filterValueLabel__kgLdG",
+        "tag": "LI",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "SearchFilterWithModal_changeLabel__mVxiN",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "cambiar"
+      },
+      {
+        "class": "margin_bottom_S__TFBBj",
+        "tag": "DIV",
+        "testid": "",
+        "text": "EV\nTodo\ncambiar"
+      },
+      {
+        "class": "SearchFilterWithModal_valueRow__GpwUJ",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\ncambiar"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "SearchFilterWithModal_changeLabel__mVxiN",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "cambiar"
+      },
+      {
+        "class": "margin_bottom_S__TFBBj",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Transmisión\nTodo\ncambiar"
+      },
+      {
+        "class": "SearchFilterWithModal_valueRow__GpwUJ",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\ncambiar"
+      },
+      {
+        "class": "FilterValueLabel_valueLabel__2_f3o",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "MultiSelectFilterValueLabel_filterValueLabel__kgLdG",
+        "tag": "LI",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "SearchFilterWithModal_changeLabel__mVxiN",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "cambiar"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Color exterior\nMate (14)\nMetálico (5504)"
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "exterior_colour-filter",
+        "text": "Color exterior"
+      },
+      {
+        "class": "colorSelect_ColorSelect__wrapper__YMPZ4",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "colorSelect_CheckMark__OnNZ2 colorSelect_CheckMark--x-large__wIFEP",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "colorSelect_CheckMark__OnNZ2 colorSelect_CheckMark--x-large__wIFEP",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "colorSelect_CheckMark__OnNZ2 colorSelect_CheckMark--x-large__wIFEP",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "colorSelect_CheckMark__OnNZ2 colorSelect_CheckMark--x-large__wIFEP",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "colorSelect_CheckMark__OnNZ2 colorSelect_CheckMark--x-large__wIFEP",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "colorSelect_ColorSelect__gradient__4D2YA",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "colorSelect_CheckMark__OnNZ2 colorSelect_CheckMark--x-large__wIFEP",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "colorSelect_CheckMark__OnNZ2 colorSelect_CheckMark--x-large__wIFEP",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "colorSelect_CheckMark__OnNZ2 colorSelect_CheckMark--x-large__wIFEP",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "colorSelect_CheckMark__OnNZ2 colorSelect_CheckMark--x-large__wIFEP",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "colorSelect_CheckMark__OnNZ2 colorSelect_CheckMark--x-large__wIFEP",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "colorSelect_CheckMark__OnNZ2 colorSelect_CheckMark--x-large__wIFEP",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "colorSelect_ColorSelect__gradient__4D2YA",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "colorSelect_CheckMark__OnNZ2 colorSelect_CheckMark--x-large__wIFEP",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "colorSelect_CheckMark__OnNZ2 colorSelect_CheckMark--x-large__wIFEP",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "ExteriorColourFilter_separatedFeaturesContainer__u2CMr",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Mate (14)\nMetálico (5504)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Mate (14)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Mate (14)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Mate (14)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Mate (14)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Mate (14)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Mate (14)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Mate (14)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (14)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Metálico (5504)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Metálico (5504)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Metálico (5504)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Metálico (5504)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Metálico (5504)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Metálico (5504)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Metálico (5504)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (5504)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Programa de usados certificados\nCualquier etiqueta de homologación"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Programa de usados certificados\nCualquier etiqueta de homologación"
+      },
+      {
+        "class": "useLayoutResponsive_listContainer___RPAs",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Cualquier etiqueta de homologación"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Cualquier etiqueta de homologación"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Cualquier etiqueta de homologación"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Cualquier etiqueta de homologación"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Cualquier etiqueta de homologación"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Aire acondicionado\nTodo\nAire acondicionado automático (2262)\nClimatización manual o automática (3879)\nClimatización automática, 2 zonas (1417)\nClimatización automática, 3 zonas (2727)\nClimatización au"
+      },
+      {
+        "class": "useLayoutResponsive_listContainer__3OLj_",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\nAire acondicionado automático (2262)\nClimatización manual o automática (3879)\nClimatización automática, 2 zonas (1417)\nClimatización automática, 3 zonas (2727)\nClimatización automática, 4 zonas ("
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "radioButton_inputIcon__8EIqi",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Aire acondicionado automático (2262)"
+      },
+      {
+        "class": "radioButton_inputIcon__8EIqi",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Aire acondicionado automático (2262)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf SingleSelectRadioFilter_aggregationCount__4WTR2",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (2262)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Climatización manual o automática (3879)"
+      },
+      {
+        "class": "radioButton_inputIcon__8EIqi",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Climatización manual o automática (3879)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf SingleSelectRadioFilter_aggregationCount__4WTR2",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (3879)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Climatización automática, 2 zonas (1417)"
+      },
+      {
+        "class": "radioButton_inputIcon__8EIqi",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Climatización automática, 2 zonas (1417)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf SingleSelectRadioFilter_aggregationCount__4WTR2",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (1417)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Climatización automática, 3 zonas (2727)"
+      },
+      {
+        "class": "radioButton_inputIcon__8EIqi",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Climatización automática, 3 zonas (2727)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf SingleSelectRadioFilter_aggregationCount__4WTR2",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (2727)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Climatización automática, 4 zonas (79)"
+      },
+      {
+        "class": "radioButton_inputIcon__8EIqi",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Climatización automática, 4 zonas (79)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf SingleSelectRadioFilter_aggregationCount__4WTR2",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (79)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Sin climatización (311)"
+      },
+      {
+        "class": "radioButton_inputIcon__8EIqi",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Sin climatización (311)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf SingleSelectRadioFilter_aggregationCount__4WTR2",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (311)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Conjuntos de funciones\nBluetooth (8402)\nOrdenador de a bordo (6896)\nReproductor de CD (3155)\nElevalunas eléctrico (7330)\nRetrovisores laterales eléctricos (7284)\nAjuste eléctrico del asiento (1819)\nSi"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Conjuntos de funciones\nBluetooth (8402)\nOrdenador de a bordo (6896)\nReproductor de CD (3155)\nElevalunas eléctrico (7330)\nRetrovisores laterales eléctricos (7284)\nAjuste eléctrico del asiento (1819)\nSi"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Bluetooth (8402)\nOrdenador de a bordo (6896)\nReproductor de CD (3155)\nElevalunas eléctrico (7330)\nRetrovisores laterales eléctricos (7284)\nAjuste eléctrico del asiento (1819)\nSistema manos libres (750"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Bluetooth (8402)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Bluetooth (8402)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Bluetooth (8402)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Bluetooth (8402)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (8402)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Ordenador de a bordo (6896)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Ordenador de a bordo (6896)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Ordenador de a bordo (6896)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Ordenador de a bordo (6896)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (6896)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Reproductor de CD (3155)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Reproductor de CD (3155)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Reproductor de CD (3155)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Reproductor de CD (3155)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (3155)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Elevalunas eléctrico (7330)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Elevalunas eléctrico (7330)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Elevalunas eléctrico (7330)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Elevalunas eléctrico (7330)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (7330)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Retrovisores laterales eléctricos (7284)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Retrovisores laterales eléctricos (7284)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Retrovisores laterales eléctricos (7284)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Retrovisores laterales eléctricos (7284)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (7284)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Ajuste eléctrico del asiento (1819)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Ajuste eléctrico del asiento (1819)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Ajuste eléctrico del asiento (1819)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Ajuste eléctrico del asiento (1819)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (1819)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Sistema manos libres (7504)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Sistema manos libres (7504)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Sistema manos libres (7504)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Sistema manos libres (7504)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (7504)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Pantalla Head-up (1949)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Pantalla Head-up (1949)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Pantalla Head-up (1949)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Pantalla Head-up (1949)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (1949)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Isofix (6621)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Isofix (6621)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Isofix (6621)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Isofix (6621)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (6621)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Volante multifunción (6744)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Volante multifunción (6744)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Volante multifunción (6744)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Volante multifunción (6744)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (6744)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Sistema de navegación (8055)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Sistema de navegación (8055)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Sistema de navegación (8055)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Sistema de navegación (8055)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (8055)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Sensor de lluvia (6142)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Sensor de lluvia (6142)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Sensor de lluvia (6142)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Sensor de lluvia (6142)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (6142)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Techo corredizo (1423)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Techo corredizo (1423)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Techo corredizo (1423)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Techo corredizo (1423)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (1423)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Dirección asistida (7657)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Dirección asistida (7657)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Dirección asistida (7657)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Dirección asistida (7657)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (7657)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Calefacción de asiento (9040)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Calefacción de asiento (9040)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Calefacción de asiento (9040)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Calefacción de asiento (9040)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (9040)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Funda para esquís (814)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Funda para esquís (814)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Funda para esquís (814)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Funda para esquís (814)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (814)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Calefacción auxiliar (705)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Calefacción auxiliar (705)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Calefacción auxiliar (705)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Calefacción auxiliar (705)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (705)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Sistema de detención y arranque (5812)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Sistema de detención y arranque (5812)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Sistema de detención y arranque (5812)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Sistema de detención y arranque (5812)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (5812)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Cierre centralizado (7497)"
+      },
+      {
+        "class": "MultiSelectFilter_checkbox__QDPh6",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Cierre centralizado (7497)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Cierre centralizado (7497)"
+      },
+      {
+        "class": "checkbox_inputIcon__XcAT5",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Cierre centralizado (7497)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (7497)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Vendedor\nTodo\nConcesionario (5839)\nVendedor particular (6063)\nVehículos de empresa (0)"
+      },
+      {
+        "class": "useLayoutResponsive_listContainer__3OLj_",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\nConcesionario (5839)\nVendedor particular (6063)\nVehículos de empresa (0)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "radioButton_inputIcon__8EIqi",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Concesionario (5839)"
+      },
+      {
+        "class": "radioButton_inputIcon__8EIqi",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Concesionario (5839)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf SingleSelectRadioFilter_aggregationCount__4WTR2",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (5839)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Vendedor particular (6063)"
+      },
+      {
+        "class": "radioButton_inputIcon__8EIqi",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Vendedor particular (6063)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf SingleSelectRadioFilter_aggregationCount__4WTR2",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (6063)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Vehículos de empresa (0)"
+      },
+      {
+        "class": "radioButton_inputIcon__8EIqi",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Vehículos de empresa (0)"
+      },
+      {
+        "class": "color_content-secondary__lLUFf SingleSelectRadioFilter_aggregationCount__4WTR2",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " (0)"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Valoración del concesionario\nTodo\ndesde\n3 estrellas\n(4842)\ndesde\n4 estrellas\n(4692)\n\ndesde\n\n5 estrellas\n(858)"
+      },
+      {
+        "class": "DealerRating_groupLabel__TtYHi",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Valoración del concesionario"
+      },
+      {
+        "class": "useLayoutResponsive_listContainer__3OLj_",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo\ndesde\n3 estrellas\n(4842)\ndesde\n4 estrellas\n(4692)\n\ndesde\n\n5 estrellas\n(858)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "radioButton_inputIcon__8EIqi",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "DealerRating_optionLabel__3W440",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "Todo"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "desde\n3 estrellas\n(4842)"
+      },
+      {
+        "class": "radioButton_inputIcon__8EIqi",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "desde\n3 estrellas\n(4842)"
+      },
+      {
+        "class": "DealerRating_optionLabel__3W440",
+        "tag": "DIV",
+        "testid": "",
+        "text": "desde\n3 estrellas\n(4842)"
+      },
+      {
+        "class": "ratingStars_RatingStars__fKi_d margin_left_S__ilDfX",
+        "tag": "DIV",
+        "testid": "",
+        "text": "3 estrellas"
+      },
+      {
+        "class": "ratingStars_SrOnlyRatingStarsLabel__03fSs",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "3 estrellas"
+      },
+      {
+        "class": "ratingStars_Stars__6nJDG",
+        "tag": "SPAN",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "(4842)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "desde\n4 estrellas\n(4692)"
+      },
+      {
+        "class": "radioButton_inputIcon__8EIqi",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "desde\n4 estrellas\n(4692)"
+      },
+      {
+        "class": "DealerRating_optionLabel__3W440",
+        "tag": "DIV",
+        "testid": "",
+        "text": "desde\n4 estrellas\n(4692)"
+      },
+      {
+        "class": "ratingStars_RatingStars__fKi_d margin_left_S__ilDfX",
+        "tag": "DIV",
+        "testid": "",
+        "text": "4 estrellas"
+      },
+      {
+        "class": "ratingStars_SrOnlyRatingStarsLabel__03fSs",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "4 estrellas"
+      },
+      {
+        "class": "ratingStars_Stars__6nJDG",
+        "tag": "SPAN",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "(4692)"
+      },
+      {
+        "class": "",
+        "tag": "LI",
+        "testid": "",
+        "text": "desde\n\n5 estrellas\n(858)"
+      },
+      {
+        "class": "radioButton_inputIcon__8EIqi",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "desde\n\n5 estrellas\n(858)"
+      },
+      {
+        "class": "DealerRating_optionLabel__3W440",
+        "tag": "DIV",
+        "testid": "",
+        "text": "desde\n\n5 estrellas\n(858)"
+      },
+      {
+        "class": "DealerRating_srOnly__zTtdd",
+        "tag": "P",
+        "testid": "",
+        "text": "desde"
+      },
+      {
+        "class": "ratingStars_RatingStars__fKi_d",
+        "tag": "DIV",
+        "testid": "",
+        "text": "5 estrellas"
+      },
+      {
+        "class": "ratingStars_SrOnlyRatingStarsLabel__03fSs",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "5 estrellas"
+      },
+      {
+        "class": "ratingStars_Stars__6nJDG",
+        "tag": "SPAN",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "color_content-secondary__lLUFf",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "(858)"
+      },
+      {
+        "class": "button_Button__wrap__gQpnZ align_align-flex-center__dFYeb",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "Más filtros"
+      },
+      {
+        "class": "button_Button__label__OceSI",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "Más filtros"
+      },
+      {
+        "class": "ActionButtons_wrapper__JDgPj",
+        "tag": "DIV",
+        "testid": "",
+        "text": "11910 ofertas coinciden con su filtro11.910 Ofertas"
+      },
+      {
+        "class": "button_Button__wrap__gQpnZ align_align-flex-center__dFYeb",
+        "tag": "SPAN",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "button_Button__wrap__gQpnZ align_align-flex-center__dFYeb",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "11.910 Ofertas"
+      },
+      {
+        "class": "button_Button__label__OceSI",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "11.910 Ofertas"
+      },
+      {
+        "class": "",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "11.910 Ofertas"
+      },
+      {
+        "class": "",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "11.910"
+      }
+    ],
+    "fullText": "Más filtros\nEstado\nTodo\ncambiar\nMarca, modelo, versión\nBMW 320\ncambiar\nPrecio\nTodo\n500 €\n1.000 €\n1.500 €\n2.000 €\n2.500 €\n3.000 €\n3.500 €\n4.000 €\n4.500 €\n5.000 €\n6.000 €\n7.000 €\n8.000 €\n9.000 €\n10.000 €\n11.000 €\n12.000 €\n13.000 €\n14.000 €\n15.000 €\n17.500 €\n20.000 €\n22.500 €\n25.000 €\n27.500 €\n30.000 €\n35.000 €\n40.000 €\n45.000 €\n50.000 €\n55.000 €\n60.000 €\n70.000 €\n80.000 €\n90.000 €\nTodo\n500 €\n1.000 €\n1.500 €\n2.000 €\n2.500 €\n3.000 €\n3.500 €\n4.000 €\n4.500 €\n5.000 €\n6.000 €\n7.000 €\n8.000 €\n9.000 €\n10.000 €\n11.000 €\n12.000 €\n13.000 €\n14.000 €\n15.000 €\n17.500 €\n20.000 €\n22.500 €\n25.000 €\n27.500 €\n30.000 €\n35.000 €\n40.000 €\n45.000 €\n50.000 €\n55.000 €\n60.000 €\n70.000 €\n80.000 €\n90.000 €\nPrimera matriculación\nTodo\n2026\n2025\n2024\n2023\n2022\n2021\n2020\n2019\n2018\n2017\n2016\n2015\n2014\n2013\n2012\n2011\n2010\n2009\n2008\n2007\n2006\n2005\n2004\n2003\n2002\n2001\n2000\n1999\n1998\n1997\n1996\n1995\n1994\n1993\n1992\n1991\n1990\n1985\n1980\n1975\n1970\n1965\n1960\n1900\nTodo\n2026\n2025\n2024\n2023\n2022\n2021\n2020\n2019\n2018\n2017\n2016\n2015\n2014\n2013\n2012\n2011\n2010\n2009\n2008\n2007\n2006\n2005\n2004\n2003\n2002\n2001\n2000\n1999\n1998\n1997\n1996\n1995\n1994\n1993\n1992\n1991\n1990\n1985\n1980\n1975\n1970\n1965\n1960\n1900\nKilometraje\nTodo\n5.000 km\n10.000 km\n20.000 km\n30.000 km\n40.000 km\n50.000 km\n60.000 km\n70.000 km\n80.000 km\n90.000 km\n100.000 km\n125.000 km\n150.000 km\n175.000 km\n200.000 km\nTodo\n5.000 km\n10.000 km\n20.000 km\n30.000 km\n40.000 km\n50.000 km\n60.000 km\n70.000 km\n80.000 km\n90.000 km\n100.000 km\n125.000 km\n150.000 km\n175.000 km\n200.000 km\n11910 ofertas coinciden con su filtro\n11.910 Ofertas\nGuardar búsqueda\nUbicación\nTodo\ncambiar\nTipo de combustible\nTodo\ncambiar\nPotencia\nTodo\ncambiar\nTipo de vehículo\nTodo\ncambiar\nEV\nTodo\ncambiar\nTransmisión\nTodo\ncambiar\nColor exterior\nMate (14)\nMetálico (5504)\nPrograma de usados certificados\nCualquier etiqueta de homologación\nAire acondicionado\nTodo\nAire acondicionado automático (2262)\nClimatización manual o automática (3879)\nClimatización automática, 2 zonas (1417)\nClimatización automática, 3 zonas (2727)\nC",
+    "index": 0
+  },
+  {
+    "elements": [
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "BMW 320\nOrdenar por\nClasificación estándar\nPrecio (más bajo primero)\nPrecio (más alto primero)\nKilometraje (más bajo primero)\nKilometraje (más alto primero)\nPrimera matriculación (más antiguos primero"
+      },
+      {
+        "class": "ResultListHeader_filterChips__58yvy",
+        "tag": "DIV",
+        "testid": "",
+        "text": "BMW 320"
+      },
+      {
+        "class": "Chip_chip__RWOtc",
+        "tag": "LI",
+        "testid": "",
+        "text": "BMW 320"
+      },
+      {
+        "class": "typography_copy__hyPNf chip_Chip__cXzGA chip_selection__yP0g9",
+        "tag": "DIV",
+        "testid": "",
+        "text": "BMW 320"
+      },
+      {
+        "class": "chip_label__Q2lhW chip_noClick__4o3aj",
+        "tag": "SPAN",
+        "testid": "chip:label",
+        "text": "BMW 320"
+      },
+      {
+        "class": "",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "BMW 320"
+      },
+      {
+        "class": "ResultListHeader_sortingMenuMobile__8DgjZ",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Clasificación estándarPrecio (más bajo primero)Precio (más alto primero)Kilometraje (más bajo primero)Kilometraje (más alto primero)Primera matriculación (más antiguos primero)Primera matriculación (m"
+      },
+      {
+        "class": "SortingMenu_sorting__n3fuC",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Clasificación estándarPrecio (más bajo primero)Precio (más alto primero)Kilometraje (más bajo primero)Kilometraje (más alto primero)Primera matriculación (más antiguos primero)Primera matriculación (m"
+      },
+      {
+        "class": "SortingMenu_dropdown__09Jg2",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Clasificación estándarPrecio (más bajo primero)Precio (más alto primero)Kilometraje (más bajo primero)Kilometraje (más alto primero)Primera matriculación (más antiguos primero)Primera matriculación (m"
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Clasificación estándarPrecio (más bajo primero)Precio (más alto primero)Kilometraje (más bajo primero)Kilometraje (más alto primero)Primera matriculación (más antiguos primero)Primera matriculación (m"
+      },
+      {
+        "class": "select_Select-wrapper__m5vtX",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Clasificación estándarPrecio (más bajo primero)Precio (más alto primero)Kilometraje (más bajo primero)Kilometraje (más alto primero)Primera matriculación (más antiguos primero)Primera matriculación (m"
+      },
+      {
+        "class": "ViewToggle_wrapper__gP811",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "ResultListHeader_sortingMenuDesktop__lfnHc",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Ordenar por\nClasificación estándar\nPrecio (más bajo primero)\nPrecio (más alto primero)\nKilometraje (más bajo primero)\nKilometraje (más alto primero)\nPrimera matriculación (más antiguos primero)\nPrimer"
+      },
+      {
+        "class": "SortingMenu_sorting__n3fuC",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Ordenar por\nClasificación estándar\nPrecio (más bajo primero)\nPrecio (más alto primero)\nKilometraje (más bajo primero)\nKilometraje (más alto primero)\nPrimera matriculación (más antiguos primero)\nPrimer"
+      },
+      {
+        "class": "SortingMenu_dropdown__09Jg2",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Ordenar por\nClasificación estándar\nPrecio (más bajo primero)\nPrecio (más alto primero)\nKilometraje (más bajo primero)\nKilometraje (más alto primero)\nPrimera matriculación (más antiguos primero)\nPrimer"
+      },
+      {
+        "class": "baseInput_BaseInput-container__aJ8av",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Ordenar por\nClasificación estándar\nPrecio (más bajo primero)\nPrecio (más alto primero)\nKilometraje (más bajo primero)\nKilometraje (más alto primero)\nPrimera matriculación (más antiguos primero)\nPrimer"
+      },
+      {
+        "class": "select_Select-wrapper__m5vtX",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Clasificación estándar\nPrecio (más bajo primero)\nPrecio (más alto primero)\nKilometraje (más bajo primero)\nKilometraje (más alto primero)\nPrimera matriculación (más antiguos primero)\nPrimera matriculac"
+      },
+      {
+        "class": "",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "Guardar búsqueda"
+      },
+      {
+        "class": "button_Button__wrap__gQpnZ align_align-flex-center__dFYeb",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "Guardar búsqueda"
+      },
+      {
+        "class": "button_Button__label__OceSI",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "Guardar búsqueda"
+      }
+    ],
+    "fullText": "11.910 BMW 320\nBMW 320\nOrdenar por\nClasificación estándar\nPrecio (más bajo primero)\nPrecio (más alto primero)\nKilometraje (más bajo primero)\nKilometraje (más alto primero)\nPrimera matriculación (más antiguos primero)\nPrimera matriculación (más recientes primero)\nListados (menos recientes primero)\nListados (más recientes primero)\nGuardar búsqueda",
+    "index": 1
+  },
+  {
+    "elements": [
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Top\nPatrocinadoBMW 320\ndA T M SPORT LCI LivePro,AHK,Pano,360°,St+Go\n42.750 €¹\nPrecio justo\nSin accidentes • PR 09/2024 • 49.359 km • 140 kW (190 cv) • Diesel\nEste vehículo ofrece:\n24 meses de garantía"
+      },
+      {
+        "class": "cornerBadge_CornerBadge__cqXpp TopAdListing_topListingBadge__L_Iqk cornerBadge_C",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Top"
+      },
+      {
+        "class": "cornerBadge_CornerBadge__label__6WzLp typography_title__TamOM cornerBadge_Corner",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Top"
+      },
+      {
+        "class": "BaseListing_container__lzcoK BaseListing_listingCard__CkWB_ BaseListing_top__7mY",
+        "tag": "DIV",
+        "testid": "top-result-listing-1",
+        "text": "PatrocinadoBMW 320\ndA T M SPORT LCI LivePro,AHK,Pano,360°,St+Go\n42.750 €¹\nPrecio justo\nSin accidentes • PR 09/2024 • 49.359 km • 140 kW (190 cv) • Diesel\nEste vehículo ofrece:\n24 meses de garantía • r"
+      },
+      {
+        "class": "ListingImageWithThumbnails_container___zFPr BaseListing_left__xOvf2 ListingImage",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "ListingImage_container__jzUck ListingImageWithThumbnails_previewImage__RTbDf Lis",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "BaseListing_topMiddle__vHswV",
+        "tag": "DIV",
+        "testid": "",
+        "text": "PatrocinadoBMW 320\ndA T M SPORT LCI LivePro,AHK,Pano,360°,St+Go\n42.750 €¹\nPrecio justo"
+      },
+      {
+        "class": "ListingTitle_wrapper__RmYNg",
+        "tag": "DIV",
+        "testid": "top-result-listing-1-title",
+        "text": "PatrocinadoBMW 320\ndA T M SPORT LCI LivePro,AHK,Pano,360°,St+Go"
+      },
+      {
+        "class": "ListingTitle_badge__dEhIy typography_meta__EI4Bp sponsoredBadge_SponsoredBadge__",
+        "tag": "SPAN",
+        "testid": "sponsored-badge",
+        "text": "Patrocinado"
+      },
+      {
+        "class": "ListingTitle_title__p3CnA",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "BMW 320"
+      },
+      {
+        "class": "ListingTitle_subTitle__DC4g_",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "dA T M SPORT LCI LivePro,AHK,Pano,360°,St+Go"
+      },
+      {
+        "class": "PriceSection_priceLabelContainer__IC8O5 BaseListing_priceSectionMobile__CuvBX",
+        "tag": "DIV",
+        "testid": "top-result-listing-1-price-section",
+        "text": "42.750 €¹\nPrecio justo"
+      },
+      {
+        "class": "PriceSection_priceRow__4mAiG",
+        "tag": "DIV",
+        "testid": "",
+        "text": "42.750 €¹\nPrecio justo"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "main-price-label",
+        "text": "42.750 €¹"
+      },
+      {
+        "class": "PriceLabel_priceWrapper__HVQZE",
+        "tag": "DIV",
+        "testid": "",
+        "text": "42.750 €¹"
+      },
+      {
+        "class": "PriceLabel_mainPrice__3SZut",
+        "tag": "SPAN",
+        "testid": "price-label",
+        "text": "42.750 €¹"
+      },
+      {
+        "class": "typography_copy__hyPNf PriceLabel_vatSup__kttKc",
+        "tag": "SPAN",
+        "testid": "price-vat-sup",
+        "text": "¹"
+      },
+      {
+        "class": "typography_copy__hyPNf PriceDetail_block__SwuBH PriceDetail_details__PZJZM Price",
+        "tag": "SPAN",
+        "testid": "price-vat",
+        "text": "19% IVA"
+      },
+      {
+        "class": "PriceSection_priceRatingBadge__eUuv2 PriceSection_reducedPriceRatingBadge__w8ZfM",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Precio justo"
+      },
+      {
+        "class": "priceRatingBadge_indicator__0aO02 priceRatingBadge_indicator--REASONABLE_PRICE__",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "SPAN",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "SPAN",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "SPAN",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "SPAN",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "",
+        "tag": "SPAN",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "priceRatingBadge_PriceRatingBadge--label__9cb8W align_align-left__DZPGZ",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Precio justo"
+      },
+      {
+        "class": "BaseListing_bottomMiddle__ji_ff",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Sin accidentes • PR 09/2024 • 49.359 km • 140 kW (190 cv) • Diesel"
+      },
+      {
+        "class": "ListingDetails_listingAttributeLine__3z387 typography_copy__hyPNf",
+        "tag": "DIV",
+        "testid": "listing-details-attributes",
+        "text": "Sin accidentes • PR 09/2024 • 49.359 km • 140 kW (190 cv) • Diesel"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Sin accidentes • PR 09/2024 • 49.359 km • 140 kW (190 cv) • Diesel"
+      },
+      {
+        "class": "OemSeal_sealContainer__TRb6w BaseListing_middle___vAm7",
+        "tag": "DIV",
+        "testid": "oem-seal-listing",
+        "text": "Este vehículo ofrece:\n24 meses de garantía • revisión 360° del vehículo • Opcional con BMW Service Inclusive"
+      },
+      {
+        "class": "",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Este vehículo ofrece:\n24 meses de garantía • revisión 360° del vehículo • Opcional con BMW Service Inclusive"
+      },
+      {
+        "class": "typography_subtitle__05sBo",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Este vehículo ofrece:"
+      },
+      {
+        "class": "",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "24 meses de garantía"
+      },
+      {
+        "class": "",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " • revisión 360° del vehículo"
+      },
+      {
+        "class": "",
+        "tag": "SPAN",
+        "testid": "",
+        "text": " • Opcional con BMW Service Inclusive"
+      },
+      {
+        "class": "SellerInfo_sellerInfoContainer__JrahE BaseListing_sellerInfo__U2ho_",
+        "tag": "DIV",
+        "testid": "seller-info",
+        "text": "WELLER Premium GmbH - BMW & MINI Vertragshändler\nDE-21073 Hamburg\n4.3 estrellas\n(356)"
+      },
+      {
+        "class": "SellerInfo_dealerIcon__RgIc6",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "SellerInfo_dealerImageContainer__KOFhF",
+        "tag": "DIV",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "SellerInfo_dealerDataContainer__C9FHI",
+        "tag": "DIV",
+        "testid": "",
+        "text": "WELLER Premium GmbH - BMW & MINI Vertragshändler\nDE-21073 Hamburg\n4.3 estrellas\n(356)"
+      },
+      {
+        "class": "SellerInfo_dealerName__9h_a1",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "WELLER Premium GmbH - BMW & MINI Vertragshändler"
+      },
+      {
+        "class": "SellerInfo_dealerLocation__vnLOm",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "DE-21073 Hamburg"
+      },
+      {
+        "class": "SellerInfo_dealerRating__GSJBh",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "4.3 estrellas\n(356)"
+      },
+      {
+        "class": "RatingStarsWithCount_ratingStarsContainer__YruyL",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "4.3 estrellas\n(356)"
+      },
+      {
+        "class": "ratingStars_RatingStars__fKi_d",
+        "tag": "DIV",
+        "testid": "",
+        "text": "4.3 estrellas"
+      },
+      {
+        "class": "ratingStars_SrOnlyRatingStarsLabel__03fSs",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "4.3 estrellas"
+      },
+      {
+        "class": "ratingStars_Stars__6nJDG",
+        "tag": "SPAN",
+        "testid": "",
+        "text": ""
+      },
+      {
+        "class": "RatingStarsWithCount_ratingCount__E069t",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "(356)"
+      },
+      {
+        "class": "BaseListing_actions__JBMxM",
+        "tag": "DIV",
+        "testid": "",
+        "text": "Contacto\nAparcar"
+      },
+      {
+        "class": "ListingActions_container__VKzLn",
+        "tag": "DIV",
+        "testid": "listing-action-buttons",
+        "text": "Contacto\nAparcar"
+      },
+      {
+        "class": "button_Button__wrap__gQpnZ align_align-flex-center__dFYeb",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "Contacto"
+      },
+      {
+        "class": "button_Button__label__OceSI",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "Contacto"
+      },
+      {
+        "class": "button_Button__wrap__gQpnZ align_align-flex-center__dFYeb",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "Aparcar"
+      },
+      {
+        "class": "button_Button__label__OceSI",
+        "tag": "SPAN",
+        "testid": "",
+        "text": "Aparcar"
+      }
+    ],
+    "fullText": "Top\nPatrocinadoBMW 320\ndA T M SPORT LCI LivePro,AHK,Pano,360°,St+Go\n42.750 €¹\nPrecio justo\nSin accidentes • PR 09/2024 • 49.359 km • 140 kW (190 cv) • Diesel\nEste vehículo ofrece:\n24 meses de garantía • revisión 360° del vehículo • Opcional con BMW Service Inclusive\nWELLER Premium GmbH - BMW & MINI Vertragshändler\nDE-21073 Hamburg\n4.3 estrellas\n(356)\nContacto\nAparcar",
+    "index": 2
+  }
+]

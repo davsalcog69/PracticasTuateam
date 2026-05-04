@@ -8,6 +8,8 @@ class CarExport(Base):
     portal = Column(String)
     brand = Column(String)
     model = Column(String)
+    vehicle_status = Column(String, nullable=False, default="Dudoso")
+    vehicle_status_check = Column(String, nullable=False, default="Dudoso")
     fuel = Column(String)
     year = Column(Integer)
     mileage = Column(Integer)

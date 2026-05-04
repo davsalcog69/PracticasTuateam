@@ -8,13 +8,13 @@ class TargetedPipeline:
     def __init__(self, target_count=20):
         self.repo = ScraperRepository()
         self.target_count = target_count
-        self.counts = {"Vito": 0, "Sprinter": 0, "Citan": 0}
+        self.counts = {"Vito": 0, "Sprinter": 0, "Citan": 0, "Serie 3": 0, "A4": 0, "Golf GTI": 0, "Golf R": 0}
         self.total_scraped = 0
         self.total_saved = 0
         self.current_portal = "unknown"
 
     def reset_counts(self):
-        self.counts = {"Vito": 0, "Sprinter": 0, "Citan": 0}
+        self.counts = {"Vito": 0, "Sprinter": 0, "Citan": 0, "Serie 3": 0, "A4": 0, "Golf GTI": 0, "Golf R": 0}
 
     def is_finished(self):
         return all(count >= self.target_count for count in self.counts.values())

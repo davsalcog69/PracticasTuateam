@@ -67,8 +67,8 @@ class ScraperRepository:
                 
                 # Dynamic insert using text() to support table_name
                 query = text(f"""
-                    INSERT INTO {table_name} (id, portal, brand, model, year, kilometrage, mileage, fuel, power, price, currency, country, location, url, source_url, images)
-                    VALUES (:id, :portal, :brand, :model, :year, :kilometrage, :mileage, :fuel, :power, :price, :currency, :country, :location, :url, :source_url, :images)
+                    INSERT INTO {table_name} (id, portal, brand, model, year, kilometrage, mileage, fuel, power, price, currency, country, location, url, source_url, images, vehicle_status, vehicle_status_check)
+                    VALUES (:id, :portal, :brand, :model, :year, :kilometrage, :mileage, :fuel, :power, :price, :currency, :country, :location, :url, :source_url, :images, :vehicle_status, :vehicle_status_check)
                     ON CONFLICT (id) DO UPDATE SET
                         price = EXCLUDED.price,
                         mileage = EXCLUDED.mileage,
@@ -77,7 +77,9 @@ class ScraperRepository:
                         power = EXCLUDED.power,
                         location = EXCLUDED.location,
                         source_url = EXCLUDED.source_url,
-                        images = EXCLUDED.images;
+                        images = EXCLUDED.images,
+                        vehicle_status = EXCLUDED.vehicle_status,
+                        vehicle_status_check = EXCLUDED.vehicle_status_check;
                 """)
                 
                 # Ensure images is a list of strings
@@ -106,7 +108,9 @@ class ScraperRepository:
                     "location": str(car_dict.get('location') or 'Desconocido'),
                     "url": car_url,
                     "source_url": str(car_dict.get('source_url') or car_url),
-                    "images": images_json  # Pass as string!
+                    "images": images_json,  # Pass as string!
+                    "vehicle_status": str(car_dict.get('vehicle_status', 'Dudoso')),
+                    "vehicle_status_check": str(car_dict.get('vehicle_status_check', 'Dudoso'))
                 }
                 session.execute(query, params)
             
@@ -134,8 +138,8 @@ class ScraperRepository:
                 car_url = str(car_dict.get('url', ''))
                 
                 query = f"""
-                    INSERT INTO {table_name} (id, portal, brand, model, year, kilometrage, mileage, fuel, power, price, currency, country, location, url, source_url, images)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    INSERT INTO {table_name} (id, portal, brand, model, year, kilometrage, mileage, fuel, power, price, currency, country, location, url, source_url, images, vehicle_status, vehicle_status_check)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                     ON CONFLICT (id) DO UPDATE SET
                         price = EXCLUDED.price,
                         mileage = EXCLUDED.mileage,
@@ -144,7 +148,9 @@ class ScraperRepository:
                         power = EXCLUDED.power,
                         location = EXCLUDED.location,
                         source_url = EXCLUDED.source_url,
-                        images = EXCLUDED.images;
+                        images = EXCLUDED.images,
+                        vehicle_status = EXCLUDED.vehicle_status,
+                        vehicle_status_check = EXCLUDED.vehicle_status_check;
                 """
                 
                 images_list = car_dict.get('images', [])
@@ -159,7 +165,9 @@ class ScraperRepository:
                     car_dict.get('currency'), car_dict.get('country'), 
                     car_dict.get('location', 'Desconocido'), car_url,
                     str(car_dict.get('source_url') or car_url),
-                    json.dumps(images_list)
+                    json.dumps(images_list),
+                    str(car_dict.get('vehicle_status', 'Dudoso')),
+                    str(car_dict.get('vehicle_status_check', 'Dudoso'))
                 ))
             conn.commit()
             self._safe_log(f"Successfully saved {len(cars)} cars to '{table_name}' using psycopg2.")

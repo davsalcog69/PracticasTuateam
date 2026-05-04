@@ -14,6 +14,8 @@ class CarAdSchema(BaseModel):
     currency: str = "EUR"
     country: str = "España"
     location: Optional[str] = None
+    vehicle_status: str = "Dudoso"
+    vehicle_status_check: str = "Dudoso"
     url: HttpUrl
     source_url: Optional[str] = None
     images: List[HttpUrl] = []

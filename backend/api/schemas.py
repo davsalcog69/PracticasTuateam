@@ -9,6 +9,8 @@ class CarSchema(BaseModel):
     brand: str
     model: str
     version: Optional[str] = None
+    vehicle_status: str = "Dudoso"
+    vehicle_status_check: str = "Dudoso"
     year: int
     kilometrage: int
     fuel: str
@@ -60,6 +62,8 @@ class CarExportSchema(BaseModel):
     portal: str
     brand: str
     model: str
+    vehicle_status: str = "Dudoso"
+    vehicle_status_check: str = "Dudoso"
     year: int
     mileage: int
     fuel: str
