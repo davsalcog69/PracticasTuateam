@@ -86,6 +86,7 @@ class CarExportSchema(BaseModel):
     total_import_cost: Optional[float] = 0.0
     final_price: Optional[float] = 0.0
     estimated_profit: Optional[float] = 0.0
+    roi_percentage: Optional[float] = 0.0
     
     created_at: Optional[datetime] = None
     images: List[str] = []

@@ -24,6 +24,7 @@ export interface CarExport {
   total_import_cost: number;
   final_price: number;
   estimated_profit: number;
+  roi_percentage?: number;
   created_at?: string;
   images?: string[];
 }

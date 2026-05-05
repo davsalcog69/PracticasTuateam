@@ -211,9 +211,11 @@ export const CarDetailModal: React.FC<CarDetailModalProps> = ({ car, onClose }) 
                 {activeTab === 'analysis' && (
                   <div className="space-y-4 animate-in">
                     <div className="p-6 rounded-2xl bg-green-500 text-white shadow-lg flex items-center justify-between">
-                      <div>
-                        <p className="text-[10px] font-semibold text-white/80 uppercase tracking-widest mb-1">Márgen Estimado</p>
-                        <p className="text-3xl font-bold tracking-tight">+{Math.round(car.estimated_profit).toLocaleString()}€</p>
+                      <div className="flex flex-col gap-1">
+                        <p className="text-[10px] font-semibold text-white/80 uppercase tracking-widest">ROI Est.</p>
+                        <div className="flex items-baseline gap-3">
+                          <p className="text-4xl font-black tracking-tight">+{Math.round(car.estimated_profit).toLocaleString()}€</p>
+                        </div>
                       </div>
                       <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-md">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

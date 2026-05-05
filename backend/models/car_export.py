@@ -33,5 +33,6 @@ class CarExport(Base):
     total_import_cost = Column(Float)
     final_price = Column(Float)
     estimated_profit = Column(Float)
+    roi_percentage = Column(Float)
     
     created_at = Column(DateTime)

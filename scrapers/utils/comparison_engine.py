@@ -3,6 +3,7 @@ import sys
 import re
 import difflib
 import json
+import statistics
 from typing import List, Dict, Any, Optional, Set
 import logging
 from sqlalchemy import text
@@ -53,6 +54,14 @@ class ComparisonEngine:
         c1 = self.clean_text(model1)
         c2 = self.clean_text(model2)
         if not c1 or not c2: return False
+        
+        # Filtro estricto por tipo de carrocería (Touring/Familiar vs Berlina)
+        body_types = ["touring", "estate", "familiar", "variant", "avant"]
+        c1_is_estate = any(b in c1 for b in body_types)
+        c2_is_estate = any(b in c2 for b in body_types)
+        if c1_is_estate != c2_is_estate:
+            return False # No mezclar berlinas con familiares
+            
         if c1 in c2 or c2 in c1: return True
         similarity = difflib.SequenceMatcher(None, c1, c2).ratio()
         return similarity >= threshold
@@ -90,6 +99,36 @@ class ComparisonEngine:
                 comparables.append(match)
                 
         return comparables
+
+    def calculate_market_median(self, comparables: List[Dict[str, Any]]) -> float:
+        if not comparables:
+            return 0.0
+            
+        prices = [c['price_eur'] for c in comparables if c.get('price_eur', 0) > 0]
+        if not prices:
+            return 0.0
+            
+        # ELIMINAR OUTLIERS (Truncamiento del 15% superior e inferior si hay suficientes datos)
+        prices.sort()
+        n = len(prices)
+        if n >= 5:
+            trim_count = int(n * 0.15) # 15% de cada lado
+            if trim_count > 0:
+                prices = prices[trim_count:-trim_count]
+                
+        # Usar mediana en vez de media para mayor robustez
+        return statistics.median(prices)
+        
+    def calculate_equipment_adjustment(self, car_dict: Dict[str, Any]) -> float:
+        adjustment = 0.0
+        text_to_check = f"{car_dict.get('brand', '')} {car_dict.get('model', '')}".lower()
+        
+        # Ajustes inteligentes por equipamiento premium
+        premium_keywords = ["m sport", "s line", "amg line", "r-line", "r line"]
+        if any(kw in text_to_check for kw in premium_keywords):
+            adjustment += 1500.0 # Sumar valor al precio de venta estimado
+            
+        return adjustment
 
     def calculate_import_costs(self, price_eur: float) -> Dict[str, Any]:
         # Based on user business logic (simplified)
@@ -140,6 +179,7 @@ class ComparisonEngine:
             total_import_cost DOUBLE PRECISION,
             final_price DOUBLE PRECISION,
             estimated_profit DOUBLE PRECISION,
+            roi_percentage DOUBLE PRECISION,
             created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
         );
         """)
@@ -241,18 +281,24 @@ class ComparisonEngine:
                 
                 avg_price_spain = 0
                 profit = 0
+                roi_pct = 0.0
+                
+                costs = self.calculate_import_costs(car_dict['price_eur'])
+                final_landing_price = car_dict['price_eur'] + costs['total_import_cost']
                 
                 if comparables:
-                    avg_price_spain = sum(c['price_eur'] for c in comparables) / len(comparables)
-                    # 2. Costs
-                    costs = self.calculate_import_costs(car_dict['price_eur'])
-                    final_landing_price = car_dict['price_eur'] + costs['total_import_cost']
+                    # Usar mediana y eliminar outliers
+                    base_median_price = self.calculate_market_median(comparables)
+                    
+                    # Ajustes inteligentes (Equipamiento)
+                    equipment_adj = self.calculate_equipment_adjustment(car_dict)
+                    avg_price_spain = base_median_price + equipment_adj
+                    
                     profit = avg_price_spain - final_landing_price
-                else:
-                    # Default costs if no comparables
-                    costs = self.calculate_import_costs(car_dict['price_eur'])
-                    final_landing_price = car_dict['price_eur'] + costs['total_import_cost']
-                    profit = 0 # No match, no ROI calculated
+                    
+                    # ROI = (precio_venta_estimado - precio_compra - costes) / precio_compra
+                    if car_dict['price_eur'] > 0:
+                        roi_pct = ((avg_price_spain - final_landing_price) / final_landing_price) * 100.0
                 
                 # 3. Filter (Strict minimum profitability: 500€)
                 if profit < 500:
@@ -307,7 +353,8 @@ class ComparisonEngine:
                     "gestor_cost": costs['gestor'],
                     "total_import_cost": costs['total_import_cost'],
                     "final_price": round(final_landing_price, 2),
-                    "estimated_profit": round(profit, 2)
+                    "estimated_profit": round(profit, 2),
+                    "roi_percentage": round(roi_pct, 2)
                 }
 
                 upsert_query = text("""
@@ -315,12 +362,12 @@ class ComparisonEngine:
                         id, portal, brand, model, vehicle_status, vehicle_status_check, year, mileage, fuel, power,
                         price, currency, country, location, url, images,
                         price_eur, price_spain_avg, transport_cost, itv_cost, registration_cost,
-                        gestor_cost, total_import_cost, final_price, estimated_profit
+                        gestor_cost, total_import_cost, final_price, estimated_profit, roi_percentage
                     ) VALUES (
                         :id, :portal, :brand, :model, :vehicle_status, :vehicle_status_check, :year, :mileage, :fuel, :power,
                         :price, :currency, :country, :location, :url, CAST(:images AS jsonb),
                         :price_eur, :price_spain_avg, :transport_cost, :itv_cost, :registration_cost,
-                        :gestor_cost, :total_import_cost, :final_price, :estimated_profit
+                        :gestor_cost, :total_import_cost, :final_price, :estimated_profit, :roi_percentage
                     ) ON CONFLICT (id) DO UPDATE SET
                         vehicle_status = EXCLUDED.vehicle_status,
                         vehicle_status_check = EXCLUDED.vehicle_status_check,
@@ -330,6 +377,7 @@ class ComparisonEngine:
                         price_spain_avg = EXCLUDED.price_spain_avg,
                         final_price = EXCLUDED.final_price,
                         estimated_profit = EXCLUDED.estimated_profit,
+                        roi_percentage = EXCLUDED.roi_percentage,
                         url = EXCLUDED.url,
                         mileage = EXCLUDED.mileage
                 """)

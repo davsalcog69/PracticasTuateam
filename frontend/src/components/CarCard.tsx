@@ -75,10 +75,12 @@ export const CarCard: React.FC<CarCardProps> = ({ car, onClick, isFavorite, onTo
         {/* Profit Badge Overlay */}
         <div className="absolute top-4 left-4 z-10">
           <div className="glass px-3.5 py-2 rounded-2xl border border-white/40 flex flex-col items-start gap-0.5">
-            <span className="text-[8px] font-bold text-slate-500 uppercase tracking-widest leading-none">Net ROI</span>
-            <span className={`text-sm font-bold tabular-nums leading-none ${isProfitable ? 'text-green-600' : 'text-slate-900'}`}>
-              {isProfitable ? '+' : ''}{profit.toLocaleString()}€
-            </span>
+            <span className="text-[8px] font-bold text-slate-500 uppercase tracking-widest leading-none">ROI Est.</span>
+            <div className="flex items-baseline gap-1">
+              <span className={`text-sm font-black tabular-nums leading-none ${isProfitable ? 'text-green-600' : 'text-slate-900'}`}>
+                {isProfitable ? '+' : ''}{profit.toLocaleString()}€
+              </span>
+            </div>
           </div>
         </div>
 

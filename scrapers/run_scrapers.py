@@ -5,7 +5,7 @@ import argparse
 import sys
 
 class TargetedPipeline:
-    def __init__(self, target_count=20):
+    def __init__(self, target_count=40):
         self.repo = ScraperRepository()
         self.target_count = target_count
         self.counts = {"Vito": 0, "Sprinter": 0, "Citan": 0, "Serie 3": 0, "A4": 0, "Golf GTI": 0, "Golf R": 0}
@@ -57,7 +57,7 @@ class TargetedPipeline:
         print(f"========================================\n")
 
 async def run_targeted_scraping():
-    pipeline = TargetedPipeline(target_count=20)
+    pipeline = TargetedPipeline(target_count=40)
     
     # 1. Coches.net (Internal baseline for price comparison)
     print(f"\n[INFO] Ejecutando scraper coches.net (Baseline de precios España)")
