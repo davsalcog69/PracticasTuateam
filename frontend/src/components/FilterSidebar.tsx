@@ -3,28 +3,58 @@ import React from 'react';
 interface FilterSidebarProps {
   selectedModel: string;
   onModelChange: (model: string) => void;
+<<<<<<< HEAD
+=======
+  minPrice: number;
+  onMinPriceChange: (price: number) => void;
+>>>>>>> development
   maxPrice: number;
   onPriceChange: (price: number) => void;
   minYear: number;
   onYearChange: (year: number) => void;
+<<<<<<< HEAD
+=======
+  maxYear: number;
+  onMaxYearChange: (year: number) => void;
+>>>>>>> development
   maxMileage: number;
   onMileageChange: (mileage: number) => void;
   minROI: number;
   onROIChange: (roi: number) => void;
+<<<<<<< HEAD
+=======
+  selectedFuel: string;
+  onFuelChange: (fuel: string) => void;
+>>>>>>> development
   onReset: () => void;
 }
 
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({ 
   selectedModel, 
   onModelChange, 
+<<<<<<< HEAD
+=======
+  minPrice,
+  onMinPriceChange,
+>>>>>>> development
   maxPrice,
   onPriceChange,
   minYear,
   onYearChange,
+<<<<<<< HEAD
+=======
+  maxYear,
+  onMaxYearChange,
+>>>>>>> development
   maxMileage,
   onMileageChange,
   minROI,
   onROIChange,
+<<<<<<< HEAD
+=======
+  selectedFuel,
+  onFuelChange,
+>>>>>>> development
   onReset 
 }) => {
   return (
@@ -44,6 +74,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             onChange={(e) => onModelChange(e.target.value)}
           >
             <option value="all">Todos los modelos</option>
+<<<<<<< HEAD
             <option value="Vito">Mercedes-Benz Vito</option>
             <option value="Sprinter">Mercedes-Benz Sprinter</option>
             <option value="Citan">Mercedes-Benz Citan</option>
@@ -84,6 +115,88 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             <option value="2023">2023+</option>
             <option value="2024">2024+</option>
           </select>
+=======
+            <optgroup label="Mercedes-Benz">
+              <option value="Vito">Vito</option>
+              <option value="Sprinter">Sprinter</option>
+              <option value="Citan">Citan</option>
+            </optgroup>
+            <optgroup label="BMW">
+              <option value="Serie 3">Serie 3</option>
+            </optgroup>
+            <optgroup label="Audi">
+              <option value="A4">A4</option>
+            </optgroup>
+            <optgroup label="Volkswagen">
+              <option value="Golf GTI">Golf GTI</option>
+              <option value="Golf R">Golf R</option>
+            </optgroup>
+          </select>
+        </div>
+
+        {/* Fuel Filter */}
+        <div className="space-y-3">
+          <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Combustible</label>
+          <select 
+            className="input-field"
+            value={selectedFuel}
+            onChange={(e) => onFuelChange(e.target.value)}
+          >
+            <option value="all">Todos los combustibles</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Gasolina">Gasolina</option>
+            <option value="Híbrido">Híbrido</option>
+            <option value="Eléctrico">Eléctrico</option>
+          </select>
+        </div>
+
+        {/* Price Range Filter */}
+        <div className="space-y-3">
+          <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Rango de Inversión</label>
+          <div className="grid grid-cols-2 gap-3">
+            <div className="relative">
+              <input 
+                type="number" 
+                value={minPrice}
+                onChange={(e) => onMinPriceChange(Number(e.target.value))}
+                placeholder="Mín" 
+                className="input-field pr-8 text-[10px]" 
+              />
+              <span className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 font-bold text-[10px] pointer-events-none">€</span>
+            </div>
+            <div className="relative">
+              <input 
+                type="number" 
+                value={maxPrice}
+                onChange={(e) => onPriceChange(Number(e.target.value))}
+                placeholder="Máx" 
+                className="input-field pr-8 text-[10px]" 
+              />
+              <span className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 font-bold text-[10px] pointer-events-none">€</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Year Range Filter */}
+        <div className="space-y-3">
+          <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Rango de Año</label>
+          <div className="grid grid-cols-2 gap-3">
+            <select 
+              className="input-field text-[10px]"
+              value={minYear}
+              onChange={(e) => onYearChange(Number(e.target.value))}
+            >
+              {[2019, 2020, 2021, 2022, 2023, 2024, 2025].map(y => <option key={y} value={y}>{y}+</option>)}
+            </select>
+            <select 
+              className="input-field text-[10px]"
+              value={maxYear}
+              onChange={(e) => onMaxYearChange(Number(e.target.value))}
+            >
+              {[2020, 2021, 2022, 2023, 2024, 2025, 2026].map(y => <option key={y} value={y}>Hasta {y}</option>)}
+            </select>
+          </div>
+>>>>>>> development
         </div>
 
         {/* Max Mileage Filter */}

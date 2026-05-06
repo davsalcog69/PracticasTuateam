@@ -258,14 +258,12 @@ class ComparisonEngine:
                     r'repaired', r'repainted', r'body repair', r'frame damage', r'structural damage',
                     
                     # DESGASTE / ESTADO MALO
-                    r'stark gebraucht', r'verschlissen', r'abgenutzt', r'gebrauchsspuren', r'starke gebrauchsspuren',
-                    r'muy usado', r'desgastado', r'desgaste alto', r'marcas de uso',
-                    r'heavily used', r'worn', r'wear and tear', r'signs of use',
+                    r'stark gebraucht', r'verschlissen', r'abgenutzt',
+                    r'muy usado', r'desgastado', r'desgaste alto',
+                    r'heavily used', r'worn'
                     
                     # EXPRESIONES ENGAÑOSAS
-                    r'leichte mängel', r'optische mängel', r'kleine schäden', r'altersbedingt', r'dem alter entsprechend',
-                    r'pequeños defectos', r'detalles estéticos', r'acorde a la edad', r'desgaste normal',
-                    r'minor defects', r'cosmetic issues', r'age related', r'small issues'
+                    r'minor defects', r'cosmetic issues'
                 ]
                 # We check the brand, model and URL as they might contain these keywords
                 text_to_check = f"{car_dict.get('brand', '')} {car_dict.get('model', '')} {car_dict.get('url', '')}".lower()

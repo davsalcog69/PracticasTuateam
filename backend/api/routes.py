@@ -12,6 +12,10 @@ from api.deps import get_current_user
 from api.auth import router as auth_router
 from api.user_routes import router as user_router
 from api.favorite_routes import router as favorite_router
+<<<<<<< HEAD
+=======
+from api.admin import router as admin_router
+>>>>>>> development
 
 router = APIRouter()
 # ... (existing service instantiations)
@@ -66,3 +70,7 @@ def get_profitable_cars(
 router.include_router(auth_router, prefix="/auth", tags=["auth"])
 router.include_router(user_router, prefix="/user", tags=["user"])
 router.include_router(favorite_router, prefix="/favorites", tags=["favorites"])
+<<<<<<< HEAD
+=======
+router.include_router(admin_router, prefix="/admin", tags=["admin"])
+>>>>>>> development

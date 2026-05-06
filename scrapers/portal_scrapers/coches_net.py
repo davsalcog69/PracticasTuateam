@@ -61,14 +61,12 @@ ACCIDENT_KEYWORDS = [
     r'repaired', r'repainted', r'body repair', r'frame damage', r'structural damage',
     
     # DESGASTE / ESTADO MALO
-    r'stark gebraucht', r'verschlissen', r'abgenutzt', r'gebrauchsspuren', r'starke gebrauchsspuren',
-    r'muy usado', r'desgastado', r'desgaste alto', r'marcas de uso',
-    r'heavily used', r'worn', r'wear and tear', r'signs of use',
+    r'stark gebraucht', r'verschlissen', r'abgenutzt',
+    r'muy usado', r'desgastado', r'desgaste alto',
+    r'heavily used', r'worn',
     
     # EXPRESIONES ENGAÑOSAS
-    r'leichte mängel', r'optische mängel', r'kleine schäden', r'altersbedingt', r'dem alter entsprechend',
-    r'pequeños defectos', r'detalles estéticos', r'acorde a la edad', r'desgaste normal',
-    r'minor defects', r'cosmetic issues', r'age related', r'small issues'
+    r'minor defects', r'cosmetic issues'
 ]
 
 # Professional Logging
@@ -407,7 +405,7 @@ class CochesNetScraper(BaseScraper):
                     continue
                 
                 logger.info(f"[{self.worker_id}] Targeting {model_name} on Coches.net...")
-                for current_page in range(1, 6): # Just a few pages per model
+                for current_page in range(1, 16): # Increased to 15 pages for better baseline
                     if pipeline.counts[model_name] >= pipeline.target_count:
                         break
                         
