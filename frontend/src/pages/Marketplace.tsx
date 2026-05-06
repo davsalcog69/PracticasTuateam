@@ -5,11 +5,7 @@ import { fetchCars, type CarExport, fetchFavorites, toggleFavorite, deleteFavori
 import { useAuth } from '../context/AuthContext';
 import { API_BASE_URL } from '../config';
 
-<<<<<<< HEAD
-type SortOption = 'profit' | 'recent';
-=======
 type SortOption = 'profit' | 'recent' | 'mileage';
->>>>>>> development
 
 export const Marketplace: React.FC = () => {
   const { token } = useAuth();
@@ -20,19 +16,12 @@ export const Marketplace: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   
   // Filter & Sort States
-<<<<<<< HEAD
-  const [selectedModel, setSelectedModel] = useState('all');
-  const [sortBy, setBySort] = useState<SortOption>('profit');
-  const [maxPrice, setMaxPrice] = useState<number>(100000);
-=======
   const [selectedModels, setSelectedModels] = useState<string[]>([]);
-  const [selectedFuels, setSelectedFuels] = useState<string[]>([]);
   const [sortBy, setBySort] = useState<SortOption>('profit');
   const [minPrice, setMinPrice] = useState<number>(0);
   const [maxPrice, setMaxPrice] = useState<number>(100000);
   const [minYear, setMinYear] = useState<number>(2019);
   const [maxYear, setMaxYear] = useState<number>(2026);
->>>>>>> development
   const [minROI, setMinROI] = useState<number>(0);
 
   useEffect(() => {
@@ -80,49 +69,28 @@ export const Marketplace: React.FC = () => {
   const filteredAndSortedCars = useMemo(() => {
     let result = [...cars];
     result = result.filter(car => {
-<<<<<<< HEAD
-      const matchModel = selectedModel === 'all' || car.model.toLowerCase().includes(selectedModel.toLowerCase());
-      const matchPrice = car.price <= maxPrice;
-      const matchROI = car.estimated_profit >= minROI;
-      return matchModel && matchPrice && matchROI;
-=======
       const matchModel = selectedModels.length === 0 || selectedModels.some(m => car.model.toLowerCase().includes(m.toLowerCase()));
-      const matchFuel = selectedFuels.length === 0 || selectedFuels.includes(car.fuel);
       const matchPrice = car.price >= minPrice && car.price <= maxPrice;
       const matchYear = car.year >= minYear && car.year <= maxYear;
       const matchROI = car.estimated_profit >= minROI;
-      return matchModel && matchFuel && matchPrice && matchYear && matchROI;
->>>>>>> development
+      return matchModel && matchPrice && matchYear && matchROI;
     });
 
     result.sort((a, b) => {
       if (sortBy === 'profit') return b.estimated_profit - a.estimated_profit;
-<<<<<<< HEAD
-      return b.year - a.year || b.estimated_profit - a.estimated_profit;
-    });
-    return result;
-  }, [cars, favoriteIds, selectedModel, sortBy, maxPrice, minROI]);
-
-  const handleReset = () => {
-    setSelectedModel('all');
-    setBySort('profit');
-    setMaxPrice(100000);
-=======
       if (sortBy === 'mileage') return a.mileage - b.mileage;
       return b.year - a.year || b.estimated_profit - a.estimated_profit;
     });
     return result;
-  }, [cars, favoriteIds, selectedModels, selectedFuels, sortBy, minPrice, maxPrice, minYear, maxYear, minROI]);
+  }, [cars, favoriteIds, selectedModels, sortBy, minPrice, maxPrice, minYear, maxYear, minROI]);
 
   const handleReset = () => {
     setSelectedModels([]);
-    setSelectedFuels([]);
     setBySort('profit');
     setMinPrice(0);
     setMaxPrice(100000);
     setMinYear(2019);
     setMaxYear(2026);
->>>>>>> development
     setMinROI(0);
   };
 
@@ -187,61 +155,9 @@ export const Marketplace: React.FC = () => {
             </div>
 
             <div className="space-y-8">
-<<<<<<< HEAD
-              {/* Model Selection - Compact Grid */}
-              <div className="space-y-4">
-                <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Modelo</label>
-                <div className="grid grid-cols-2 gap-2">
-                  {['all', 'Vito', 'Sprinter', 'Citan', 'Serie 3', 'A4', 'Golf GTI', 'Golf R'].map((model) => (
-                    <button
-                      key={model}
-                      onClick={() => setSelectedModel(model)}
-                      className={`px-4 py-3 rounded-2xl text-xs font-bold transition-all border ${
-                        selectedModel === model 
-                        ? 'bg-slate-900 border-slate-900 text-white shadow-lg' 
-                        : 'bg-slate-50 border-transparent text-slate-500 hover:bg-slate-100'
-                      }`}
-                    >
-                      {model === 'all' ? 'Todos' : model}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Price Range */}
-              <div className="space-y-4">
-                <div className="flex justify-between items-end ml-1">
-                  <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">Inversión Máx.</label>
-                  <span className="text-sm font-bold text-slate-900">{maxPrice.toLocaleString()}€</span>
-                </div>
-                <input 
-                  type="range" min="0" max="100000" step="1000" value={maxPrice}
-                  onChange={(e) => setMaxPrice(parseInt(e.target.value))}
-                  className="w-full accent-slate-900 h-1.5 bg-slate-100 rounded-full appearance-none cursor-pointer"
-                />
-              </div>
-
-              {/* ROI Filter */}
-              <div className="space-y-4">
-                <div className="flex justify-between items-end ml-1">
-                  <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">ROI Mínimo</label>
-                  <span className="text-sm font-bold text-green-600">+{minROI.toLocaleString()}€</span>
-                </div>
-                <input 
-                  type="range" min="0" max="20000" step="500" value={minROI}
-                  onChange={(e) => setMinROI(parseInt(e.target.value))}
-                  className="w-full accent-green-500 h-1.5 bg-slate-100 rounded-full appearance-none cursor-pointer"
-                />
-              </div>
-
-              {/* Sort Logic */}
-              <div className="space-y-4">
-                <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Ordenar</label>
-=======
               {/* Sort Logic - MOVED TO TOP */}
               <div className="space-y-4">
                 <label className="text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">Ordenar por</label>
->>>>>>> development
                 <div className="flex bg-slate-50 p-1 rounded-2xl border border-slate-100">
                   <button 
                     onClick={() => setBySort('profit')}
@@ -259,10 +175,6 @@ export const Marketplace: React.FC = () => {
                   >
                     Año
                   </button>
-<<<<<<< HEAD
-                </div>
-              </div>
-=======
                   <button 
                     onClick={() => setBySort('mileage')}
                     className={`flex-1 py-2.5 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-all ${
@@ -304,39 +216,6 @@ export const Marketplace: React.FC = () => {
                 </select>
               </div>
 
-              {/* Fuel Selection - Multi-select grid */}
-              <div className="space-y-4">
-                <div className="flex justify-between items-center ml-1">
-                  <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">Combustible</label>
-                  <button 
-                    onClick={() => setSelectedFuels([])}
-                    className="text-[10px] font-bold text-accent-600 uppercase tracking-tighter"
-                  >
-                    Todos
-                  </button>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {['Diesel', 'Gasolina', 'Híbrido', 'Eléctrico'].map((fuel) => {
-                    const isSelected = selectedFuels.includes(fuel);
-                    return (
-                      <button
-                        key={fuel}
-                        onClick={() => {
-                          if (isSelected) setSelectedFuels(selectedFuels.filter(f => f !== fuel));
-                          else setSelectedFuels([...selectedFuels, fuel]);
-                        }}
-                        className={`px-3 py-2.5 rounded-xl text-[10px] font-bold transition-all border ${
-                          isSelected 
-                          ? 'bg-slate-900 border-slate-900 text-white shadow-md' 
-                          : 'bg-slate-50 border-transparent text-slate-500 hover:bg-slate-100'
-                        }`}
-                      >
-                        {fuel}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
 
               {/* Price Range */}
               <div className="space-y-4">
@@ -411,7 +290,6 @@ export const Marketplace: React.FC = () => {
                   className="w-full accent-green-500 h-1.5 bg-slate-100 rounded-full appearance-none cursor-pointer"
                 />
               </div>
->>>>>>> development
             </div>
           </div>
         </aside>

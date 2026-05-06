@@ -1,51 +1,12 @@
-<<<<<<< HEAD
-import { NavLink, Link, useNavigate, useLocation } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
-import { LogOut, ShieldCheck } from 'lucide-react';
-=======
 import React from 'react';
 import { NavLink, Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { LogOut, ShieldCheck, RefreshCw } from 'lucide-react';
-import { API_BASE_URL } from '../config';
->>>>>>> development
+import { LogOut, ShieldCheck } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-<<<<<<< HEAD
-=======
-  const [isUpdating, setIsUpdating] = React.useState(false);
-
-  const handleResetAndScrape = async () => {
-    if (!window.confirm('¿Estás seguro de que deseas limpiar la base de datos e iniciar los scrapers? Esta acción borrará todos los coches actuales y tardará entre 30 y 60 minutos en completarse.')) {
-      return;
-    }
-
-    setIsUpdating(true);
-    try {
-      const response = await fetch(`${API_BASE_URL}/admin/reset-and-scrape`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${sessionStorage.getItem('token')}`
-        }
-      });
-
-      const data = await response.json();
-      if (response.ok) {
-        alert(data.message);
-      } else {
-        alert(`Error: ${data.detail}`);
-      }
-    } catch (err) {
-      console.error('Failed to reset and scrape', err);
-      alert('Error al conectar con el servidor.');
-    } finally {
-      setIsUpdating(false);
-    }
-  };
->>>>>>> development
 
   return (
     <nav className="sticky top-0 z-[1000] px-10 py-6 flex justify-between items-center bg-white/80 backdrop-blur-3xl border-b border-slate-100 shadow-sm transition-all duration-500">
@@ -67,42 +28,12 @@ export const Navbar: React.FC = () => {
         </div>
       </Link>
       
-<<<<<<< HEAD
-      <div className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-14">
-        {[
-          { label: 'Explorar', path: '/marketplace' },
-          { label: 'Favoritos', path: '/favorites' },
-        ].map((link) => {
-          const isActive = location.pathname.startsWith(link.path);
-
-          return (
-            <Link 
-              key={link.path}
-              to={link.path}
-              className={`text-sm font-bold transition-all relative group uppercase tracking-[0.2em] py-2 ${
-                isActive ? 'text-slate-900' : 'text-slate-500 hover:text-slate-900'
-              }`}
-            >
-              {link.label}
-              <span className={`absolute -bottom-1 left-0 h-1 bg-accent-600 transition-all duration-500 rounded-full ${
-                isActive ? 'w-full' : 'w-0 group-hover:w-full'
-              }`} />
-            </Link>
-          );
-        })}
-      </div>
-      
-      <div className="flex items-center gap-8">
-        {user?.is_admin && (
-           <div className="hidden md:flex items-center gap-2.5 px-4 py-2 bg-accent-50 text-accent-700 rounded-2xl border border-accent-100 animate-reveal">
-             <ShieldCheck className="w-5 h-5" />
-             <span className="text-xs font-black uppercase tracking-widest">Master Admin</span>
-=======
       {user && (
         <div className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-14">
           {[
             { label: 'Explorar', path: '/marketplace' },
             { label: 'Favoritos', path: '/favorites' },
+            ...(user.is_admin ? [{ label: 'Admin', path: '/admin' }] : [])
           ].map((link) => {
             const isActive = location.pathname.startsWith(link.path);
 
@@ -126,25 +57,9 @@ export const Navbar: React.FC = () => {
       
       <div className="flex items-center gap-8">
         {user?.is_admin && (
-           <div className="hidden md:flex items-center gap-4">
-             <button
-               onClick={handleResetAndScrape}
-               disabled={isUpdating}
-               className={`flex items-center gap-2.5 px-5 py-2.5 rounded-2xl border transition-all duration-300 font-bold uppercase tracking-widest text-[10px] ${
-                 isUpdating 
-                 ? 'bg-slate-100 border-slate-200 text-slate-400 cursor-not-allowed' 
-                 : 'bg-red-50 border-red-100 text-red-600 hover:bg-red-600 hover:text-white hover:border-red-600 hover:shadow-lg hover:shadow-red-500/20'
-               }`}
-             >
-               <RefreshCw className={`w-4 h-4 ${isUpdating ? 'animate-spin' : ''}`} />
-               {isUpdating ? 'Procesando...' : 'Actualizar Coches'}
-             </button>
-
-             <div className="flex items-center gap-2.5 px-4 py-2 bg-accent-50 text-accent-700 rounded-2xl border border-accent-100 animate-reveal">
-               <ShieldCheck className="w-5 h-5" />
-               <span className="text-xs font-black uppercase tracking-widest">Master Admin</span>
-             </div>
->>>>>>> development
+           <div className="hidden md:flex items-center gap-2.5 px-4 py-2 bg-accent-50 text-accent-700 rounded-2xl border border-accent-100 animate-reveal">
+             <ShieldCheck className="w-5 h-5" />
+             <span className="text-xs font-black uppercase tracking-widest">Master Admin</span>
            </div>
         )}
 

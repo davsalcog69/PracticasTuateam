@@ -207,7 +207,7 @@ class MobileDeScraper(BaseScraper):
                 
             brand_mapped = "Unknown"
             model_mapped = "Unknown"
-            fuel_mapped = "Gasolina" if "benzin" in full_text else ("Diesel" if "diesel" in full_text else "Unknown")
+            fuel_mapped = "Diesel" if "diesel" in full_text else "Gasolina"
             
             # --- Reglas para Premium Models ---
             if model_category in ["Serie 3", "A4", "Golf GTI", "Golf R"]:

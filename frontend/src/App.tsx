@@ -5,6 +5,7 @@ import { Marketplace } from './pages/Marketplace';
 import { FavoritesPage } from './pages/FavoritesPage';
 import { LoginPage } from './pages/LoginPage';
 import { AccountPage } from './pages/AccountPage';
+import { AdminPage } from './pages/AdminPage';
 import { AuthProvider, useAuth } from './context/AuthContext';
 
 // Protected Route Component
@@ -48,6 +49,14 @@ function AppRoutes() {
           element={
             <ProtectedRoute>
               <AccountPage />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/admin" 
+          element={
+            <ProtectedRoute>
+              <AdminPage />
             </ProtectedRoute>
           } 
         />

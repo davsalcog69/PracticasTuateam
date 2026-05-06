@@ -45,8 +45,8 @@ coches.net (ES) ─────┘         (Playwright)         (vehicle_status)
 
 El sistema funciona en **tres fases secuenciales**:
 
-1. **Fase 1 — Baseline España**: Scrapeamos 40 coches por modelo en `coches.net` para construir la referencia de precios del mercado español.
-2. **Fase 2 — Oportunidades Alemania**: Scrapeamos 40 coches por modelo en `mobile.de` buscando unidades limpias y baratas.
+1. **Fase 1 — Baseline España**: Scrapeamos 30 coches por modelo en `coches.net` para construir la referencia de precios del mercado español.
+2. **Fase 2 — Oportunidades Alemania**: Scrapeamos 20 coches por modelo en `mobile.de` buscando unidades limpias y baratas.
 3. **Fase 3 — Análisis ROI**: El `ComparisonEngine` cruza ambos datasets, calcula el margen real y exporta las oportunidades rentables al dashboard.
 
 ---
@@ -119,6 +119,8 @@ PracticasTuateam/
 │   ├── tailwind.config.js
 │   └── vite.config.ts
 │
+├── database/                       # Esquemas SQL actualizados
+│   └── schema.sql
 └── README.md
 ```
 
@@ -187,7 +189,7 @@ El dashboard estará disponible en: `http://localhost:5173`
 cd scrapers
 py run_scrapers.py
 ```
-> ⚠️ Este proceso abre instancias de Chromium automatizadas y puede tardar **30–60 minutos** en completar el pipeline de los 7 modelos con 40 coches cada uno.
+> ⚠️ Este proceso abre instancias de Chromium automatizadas y puede tardar **15–30 minutos** en completar el pipeline con las cuotas actuales (30 España / 20 Alemania).
 
 ---
 
@@ -197,10 +199,10 @@ py run_scrapers.py
 run_scrapers.py
 │
 ├── FASE 1: coches.net (España) — baseline de precios
-│   └── 40 coches/modelo × 7 modelos = hasta 280 referencias de mercado
+│   └── 30 coches/modelo × 7 modelos = hasta 210 referencias de mercado
 │
 ├── FASE 2: mobile.de (Alemania) — búsqueda de oportunidades
-│   └── 40 coches/modelo × 7 modelos = hasta 280 candidatos
+│   └── 20 coches/modelo × 7 modelos = hasta 140 candidatos
 │
 └── FASE 3: ComparisonEngine
     ├── Carga coches de Alemania desde la BD
@@ -212,6 +214,7 @@ run_scrapers.py
     │   ├── Suma costes de importación (2.500€ fijos: transporte + ITV + gestoría)
     │   ├── Calcula beneficio neto = precio_mediana_españa - precio_alemania - costes
     │   └── Si beneficio > 500€ → guarda en car_export (visible en dashboard)
+    ├── Predicción Inteligente: Si el combustible es desconocido, se asigna 'Gasolina' por defecto (especialmente para modelos como Golf GTI/R, Serie 3, A4).
     └── Commit a PostgreSQL
 ```
 

@@ -8,7 +8,6 @@ from datetime import datetime
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from core.database import SessionLocal
-from repositories.scrape_run_repository import ScrapeRunRepository
 from services.analysis_service import AnalysisService
 
 # Import scrapers (assuming they are in the scrapers folder)
@@ -19,12 +18,11 @@ from portal_scrapers.mobile_de import MobileDeScraper
 from utils.db_repository import ScraperRepository
 
 scheduler = BlockingScheduler()
-run_repo = ScrapeRunRepository()
 analysis_service = AnalysisService()
 
 def run_scraper_job(portal_name: str, scraper_class, brand: str = "Mercedes", model: str = "Vito,Sprinter,Citan"):
     db = SessionLocal()
-    run = run_repo.create_run(db, portal_name)
+    # Deleted run_repo call
     print(f"[{datetime.now()}] Starting {portal_name} scraper...")
     
     try:
@@ -38,29 +36,29 @@ def run_scraper_job(portal_name: str, scraper_class, brand: str = "Mercedes", mo
         # --- NEW PIPELINE STEP: DATABASE CLEANUP ---
         deleted_count = scraper_repo.cleanup_invalid_cars()
         
-        run_repo.update_run(db, run.id, "COMPLETED", cars_scraped=len(ads))
+        # Deleted run_repo call
         print(f"[{datetime.now()}] {portal_name} scraper finished.")
         print(f"[INFO] Scrapeados: {len(ads)}")
         print(f"[INFO] Guardados: {len(ads)}")
         print(f"[INFO] Eliminados de BD: {deleted_count}")
     except Exception as e:
-        run_repo.update_run(db, run.id, "FAILED", errors=str(e))
+        # Deleted run_repo call
         print(f"[{datetime.now()}] {portal_name} scraper failed: {e}")
     finally:
         db.close()
 
 def run_analysis_job():
     db = SessionLocal()
-    run = run_repo.create_run(db, "analysis_engine")
+    # Deleted run_repo call
     print(f"[{datetime.now()}] Starting profitability analysis...")
     
     try:
         results = analysis_service.get_profitable_opportunities(db)
-        run_repo.update_run(db, run.id, "COMPLETED", cars_scraped=len(results))
+        # Deleted run_repo call
         print(f"[{datetime.now()}] Analysis finished. Opportunities detected: {len(results)}")
     except Exception as e:
-        run_repo.update_run(db, run.id, "FAILED", errors=str(e))
-        print(f"[{datetime.now()}] Analysis failed: {e}")
+        # Deleted run_repo call
+        print(f"[{datetime.now()}] {analysis_service} failed: {e}")
     finally:
         db.close()
 

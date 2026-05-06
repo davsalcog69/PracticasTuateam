@@ -13,6 +13,9 @@ class TargetedPipeline:
         self.total_saved = 0
         self.current_portal = "unknown"
 
+    def set_target(self, count):
+        self.target_count = count
+
     def reset_counts(self):
         self.counts = {"Vito": 0, "Sprinter": 0, "Citan": 0, "Serie 3": 0, "A4": 0, "Golf GTI": 0, "Golf R": 0}
 
@@ -29,7 +32,6 @@ class TargetedPipeline:
              return False
         
         if model not in self.counts:
-            # print(f"[SKIP] {item.brand} {model}")
             return False
 
         if self.counts[model] >= self.target_count:
@@ -51,20 +53,20 @@ class TargetedPipeline:
 
     def report(self, portal_label):
         print(f"\n========================================")
-        print(f"REPORT FOR {portal_label}")
+        print(f"REPORT FOR {portal_label} (Target: {self.target_count})")
         for model, count in self.counts.items():
             print(f"{model}: {count}")
         print(f"========================================\n")
 
 async def run_targeted_scraping():
-    pipeline = TargetedPipeline(target_count=40)
+    pipeline = TargetedPipeline(target_count=30) # Default for Coches.net
     
     # 1. Coches.net (Internal baseline for price comparison)
-    print(f"\n[INFO] Ejecutando scraper coches.net (Baseline de precios España)")
+    print(f"\n[INFO] Ejecutando scraper coches.net (Target: 30 por modelo)")
     pipeline.current_portal = "coches.net"
+    pipeline.set_target(30)
     coches_scraper = CochesNetScraper()
     try:
-        # We still scrape to have average prices for ROI calculation
         await coches_scraper.scrape_for_pipeline(pipeline)
     except Exception as e:
         print(f"[CRITICAL] Coches.net failed: {e}")
@@ -73,11 +75,11 @@ async def run_targeted_scraping():
     pipeline.reset_counts() 
 
     # 2. Mobile.de (Primary Marketplace Source)
-    print(f"\n[INFO] Ejecutando scraper mobile.de (Fuente principal)")
+    print(f"\n[INFO] Ejecutando scraper mobile.de (Target: 20 por modelo)")
     pipeline.current_portal = "mobile.de"
+    pipeline.set_target(20)
     mobile_scraper = MobileDeScraper()
     try:
-        # Saving to main 'cars' table for frontend visibility
         await mobile_scraper.scrape_for_pipeline(pipeline)
     except Exception as e:
         print(f"[CRITICAL] Mobile.de failed: {e}")

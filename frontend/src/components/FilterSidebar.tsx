@@ -3,58 +3,36 @@ import React from 'react';
 interface FilterSidebarProps {
   selectedModel: string;
   onModelChange: (model: string) => void;
-<<<<<<< HEAD
-=======
   minPrice: number;
   onMinPriceChange: (price: number) => void;
->>>>>>> development
   maxPrice: number;
   onPriceChange: (price: number) => void;
   minYear: number;
   onYearChange: (year: number) => void;
-<<<<<<< HEAD
-=======
   maxYear: number;
   onMaxYearChange: (year: number) => void;
->>>>>>> development
   maxMileage: number;
   onMileageChange: (mileage: number) => void;
   minROI: number;
   onROIChange: (roi: number) => void;
-<<<<<<< HEAD
-=======
-  selectedFuel: string;
-  onFuelChange: (fuel: string) => void;
->>>>>>> development
   onReset: () => void;
 }
 
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({ 
   selectedModel, 
   onModelChange, 
-<<<<<<< HEAD
-=======
   minPrice,
   onMinPriceChange,
->>>>>>> development
   maxPrice,
   onPriceChange,
   minYear,
   onYearChange,
-<<<<<<< HEAD
-=======
   maxYear,
   onMaxYearChange,
->>>>>>> development
   maxMileage,
   onMileageChange,
   minROI,
   onROIChange,
-<<<<<<< HEAD
-=======
-  selectedFuel,
-  onFuelChange,
->>>>>>> development
   onReset 
 }) => {
   return (
@@ -74,48 +52,6 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
             onChange={(e) => onModelChange(e.target.value)}
           >
             <option value="all">Todos los modelos</option>
-<<<<<<< HEAD
-            <option value="Vito">Mercedes-Benz Vito</option>
-            <option value="Sprinter">Mercedes-Benz Sprinter</option>
-            <option value="Citan">Mercedes-Benz Citan</option>
-            <option value="Serie 3">BMW Serie 3</option>
-            <option value="A4">Audi A4</option>
-            <option value="Golf GTI">VW Golf GTI</option>
-            <option value="Golf R">VW Golf R</option>
-          </select>
-        </div>
-
-        {/* Max Price Filter */}
-        <div className="space-y-3">
-          <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Inversión Máxima</label>
-          <div className="relative">
-            <input 
-              type="number" 
-              value={maxPrice}
-              onChange={(e) => onPriceChange(Number(e.target.value))}
-              placeholder="50000" 
-              className="input-field pr-10" 
-            />
-            <span className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 font-bold text-xs pointer-events-none">€</span>
-          </div>
-        </div>
-
-        {/* Min Year Filter - Restricted to 2023-2026 */}
-        <div className="space-y-3">
-          <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Año Mínimo</label>
-          <select 
-            className="input-field"
-            value={minYear}
-            onChange={(e) => onYearChange(Number(e.target.value))}
-          >
-            <option value="2019">2019+</option>
-            <option value="2020">2020+</option>
-            <option value="2021">2021+</option>
-            <option value="2022">2022+</option>
-            <option value="2023">2023+</option>
-            <option value="2024">2024+</option>
-          </select>
-=======
             <optgroup label="Mercedes-Benz">
               <option value="Vito">Vito</option>
               <option value="Sprinter">Sprinter</option>
@@ -134,21 +70,6 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
           </select>
         </div>
 
-        {/* Fuel Filter */}
-        <div className="space-y-3">
-          <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-1">Combustible</label>
-          <select 
-            className="input-field"
-            value={selectedFuel}
-            onChange={(e) => onFuelChange(e.target.value)}
-          >
-            <option value="all">Todos los combustibles</option>
-            <option value="Diesel">Diesel</option>
-            <option value="Gasolina">Gasolina</option>
-            <option value="Híbrido">Híbrido</option>
-            <option value="Eléctrico">Eléctrico</option>
-          </select>
-        </div>
 
         {/* Price Range Filter */}
         <div className="space-y-3">
@@ -196,7 +117,6 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
               {[2020, 2021, 2022, 2023, 2024, 2025, 2026].map(y => <option key={y} value={y}>Hasta {y}</option>)}
             </select>
           </div>
->>>>>>> development
         </div>
 
         {/* Max Mileage Filter */}

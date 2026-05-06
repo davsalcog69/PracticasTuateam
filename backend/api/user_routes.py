@@ -46,7 +46,7 @@ def update_password_me(
     db.commit()
     return {"message": "Contraseña actualizada correctamente"}
 
-@router.post("/record-visit/{car_id}")
+@router.post("/record-visit")
 def record_visit(
     car_id: str,
     model_name: str = Body(..., embed=True),

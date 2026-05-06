@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import type { CarExport } from '../api/cars';
+import { recordVisit } from '../api/cars';
 
 interface CarDetailModalProps {
   car: CarExport | null;
@@ -254,6 +255,7 @@ export const CarDetailModal: React.FC<CarDetailModalProps> = ({ car, onClose }) 
             href={car.url || '#'} 
             target="_blank" 
             rel="noopener noreferrer"
+            onClick={() => recordVisit(car.id, car.model)}
             className="btn btn-primary min-w-[280px] py-4 text-[11px] uppercase tracking-[0.2em] shadow-xl"
           >
             Ver en Origen

@@ -90,3 +90,16 @@ export async function fetchFavorites(): Promise<CarExport[]> {
   // We return the car objects from the favorite records
   return data.map((fav: any) => fav.car).filter((car: any) => car !== null);
 }
+
+export async function recordVisit(carId: string, modelName: string): Promise<void> {
+  const token = sessionStorage.getItem('token');
+  const response = await fetch(`${API_BASE_URL}/user/record-visit?car_id=${encodeURIComponent(carId)}`, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ model_name: modelName })
+  });
+  if (!response.ok) console.error('Failed to record visit');
+}

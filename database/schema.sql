@@ -1,49 +1,69 @@
--- Database Schema for Car Import AI
+-- PostgreSQL Database Schema for CocheExport Intelligence
+-- Current as of 2026-05-06
 
--- Table to track each scraping execution
-CREATE TABLE IF NOT EXISTS scrape_runs (
-    id SERIAL PRIMARY KEY,
-    portal VARCHAR(50) NOT NULL,
-    status VARCHAR(20) DEFAULT 'running', -- 'running', 'completed', 'failed'
-    started_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    finished_at TIMESTAMP,
-    items_scraped INTEGER DEFAULT 0
-);
-
--- Main table for car ads
+-- Main table for raw car data from scrapers
 CREATE TABLE IF NOT EXISTS cars (
-    id SERIAL PRIMARY KEY,
-    scrape_run_id INTEGER REFERENCES scrape_runs(id),
-    portal VARCHAR(50) NOT NULL,
-    brand VARCHAR(100) NOT NULL,
-    model VARCHAR(100) NOT NULL,
-    version VARCHAR(255),
+    id VARCHAR(255) PRIMARY KEY, -- URL used as unique identifier
+    portal TEXT,
+    brand VARCHAR(100),
+    model VARCHAR(100),
     year INTEGER,
+    mileage INTEGER,
     kilometrage INTEGER,
-    fuel VARCHAR(50),
-    transmission VARCHAR(50),
+    fuel TEXT,
     power INTEGER,
-    price DECIMAL(12, 2) NOT NULL,
-    currency VARCHAR(10) DEFAULT 'EUR',
-    location VARCHAR(255),
-    url TEXT UNIQUE NOT NULL, -- Used to avoid duplicates
-    scraped_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    price DOUBLE PRECISION,
+    currency TEXT,
+    country VARCHAR(100),
+    location TEXT,
+    url TEXT,
+    source_url TEXT,
+    images JSONB, -- Array of image URLs
+    version TEXT,
+    vehicle_status VARCHAR(100) NOT NULL DEFAULT 'Dudoso',
+    vehicle_status_check VARCHAR(100) NOT NULL DEFAULT 'Dudoso'
 );
 
--- Table for car images (multiple images per car)
-CREATE TABLE IF NOT EXISTS car_images (
-    id SERIAL PRIMARY KEY,
-    car_id INTEGER REFERENCES cars(id) ON DELETE CASCADE,
-    image_url TEXT NOT NULL,
-    order_index INTEGER DEFAULT 0
+-- Table for analyzed profitable opportunities
+CREATE TABLE IF NOT EXISTS car_export (
+    id TEXT PRIMARY KEY,
+    portal TEXT,
+    brand TEXT,
+    model TEXT,
+    year INTEGER,
+    mileage INTEGER,
+    fuel TEXT,
+    power INTEGER,
+    price DOUBLE PRECISION,
+    currency TEXT,
+    country TEXT,
+    location TEXT,
+    url TEXT,
+    price_eur DOUBLE PRECISION,
+    price_spain_avg DOUBLE PRECISION,
+    transport_cost DOUBLE PRECISION,
+    import_tax DOUBLE PRECISION,
+    itv_cost DOUBLE PRECISION,
+    registration_cost DOUBLE PRECISION,
+    gestor_cost DOUBLE PRECISION,
+    total_import_cost DOUBLE PRECISION,
+    final_price DOUBLE PRECISION,
+    estimated_profit DOUBLE PRECISION,
+    roi_percentage DOUBLE PRECISION,
+    images JSONB,
+    source_url TEXT,
+    vehicle_status VARCHAR(100) NOT NULL DEFAULT 'Dudoso',
+    vehicle_status_check VARCHAR(100) NOT NULL DEFAULT 'Dudoso',
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
--- Table for user inspection requests
-CREATE TABLE IF NOT EXISTS inspection_requests (
+-- Users table (Integrated with Supabase Auth or standalone)
+CREATE TABLE IF NOT EXISTS users (
     id SERIAL PRIMARY KEY,
-    car_id INTEGER REFERENCES cars(id) ON DELETE CASCADE,
-    user_contact VARCHAR(255) NOT NULL, -- Email or phone
-    request_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    status VARCHAR(20) DEFAULT 'pending', -- 'pending', 'contacted', 'completed'
-    notes TEXT
+    username VARCHAR(100) UNIQUE NOT NULL,
+    hashed_password VARCHAR(255) NOT NULL,
+    full_name VARCHAR(255),
+    is_admin BOOLEAN DEFAULT FALSE,
+    avatar VARCHAR(255),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );

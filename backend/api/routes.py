@@ -2,9 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
 from core.database import get_db
-from api.schemas import CarSchema, ModelResponse, InspectionCreate, InspectionResponse, ProfitableCarResponse, ExportedCarResponse
+from api.schemas import CarSchema, ModelResponse, ProfitableCarResponse, ExportedCarResponse
 from services.car_service import CarService
-from services.inspection_service import InspectionService
 from services.analysis_service import AnalysisService
 from api.deps import get_current_user
 
@@ -12,15 +11,11 @@ from api.deps import get_current_user
 from api.auth import router as auth_router
 from api.user_routes import router as user_router
 from api.favorite_routes import router as favorite_router
-<<<<<<< HEAD
-=======
 from api.admin import router as admin_router
->>>>>>> development
 
 router = APIRouter()
 # ... (existing service instantiations)
 car_service = CarService()
-inspection_service = InspectionService()
 analysis_service = AnalysisService()
 
 # Protected Routes (Require Login)
@@ -51,13 +46,6 @@ def get_model_ads(
 ):
     return car_service.get_cars_by_model(db, brand, model)
 
-@router.post("/inspection-request", response_model=InspectionResponse)
-def create_inspection_request(
-    request: InspectionCreate, 
-    db: Session = Depends(get_db),
-    current_user = Depends(get_current_user)
-):
-    return inspection_service.create_inspection_request(db, request)
 
 @router.get("/profitable-cars", response_model=List[ProfitableCarResponse])
 def get_profitable_cars(
@@ -70,7 +58,4 @@ def get_profitable_cars(
 router.include_router(auth_router, prefix="/auth", tags=["auth"])
 router.include_router(user_router, prefix="/user", tags=["user"])
 router.include_router(favorite_router, prefix="/favorites", tags=["favorites"])
-<<<<<<< HEAD
-=======
 router.include_router(admin_router, prefix="/admin", tags=["admin"])
->>>>>>> development

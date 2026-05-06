@@ -225,6 +225,11 @@ class CochesNetScraper(BaseScraper):
                 "source_url": item.get('url', ''),
                 "images": [item.get('mainImage')] if item.get('mainImage') else []
             })
+            
+            # Default to Gasolina for premium models if Unknown
+            if model in ["Golf GTI", "Golf R", "Serie 3", "A4"]:
+                if ad.get("fuel") in ["Desconocido", "Unknown", None]:
+                    ad["fuel"] = "Gasolina"
             if ad["url"] and ad["url"].startswith("/"):
                 ad["url"] = f"{BASE_URL}{ad['url']}"
                 ad["source_url"] = ad["url"]

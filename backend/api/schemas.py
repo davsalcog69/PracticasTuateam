@@ -31,21 +31,7 @@ class ModelResponse(BaseModel):
     total_results: int
     cars: List[CarSchema]
 
-class InspectionCreate(BaseModel):
-    car_id: str
-    name: str
-    email: str
-    phone: str
-    message: Optional[str] = None
 
-class InspectionResponse(BaseModel):
-    id: str
-    car_id: str
-    status: str
-    created_at: datetime
-    
-    class Config:
-        from_attributes = True
 
 class ProfitableCarResponse(BaseModel):
     brand: str

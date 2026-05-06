@@ -30,7 +30,7 @@ class Car(Base):
     url = Column(String)
     images = Column(JSON, default=[]) # Stored as ["url1", "url2"]
 
-    inspections = relationship("InspectionRequest", back_populates="car")
+
 
 
 class CarPriceHistory(Base):
