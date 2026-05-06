@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, Integer, Float, ForeignKey
+from sqlalchemy import Column, String, Integer, Float, ForeignKey, DateTime, func, JSON
 from sqlalchemy.orm import relationship
 from core.database import Base
 
@@ -6,22 +6,41 @@ class Car(Base):
     __tablename__ = "cars"
 
     id = Column(String, primary_key=True, index=True)
-    brand = Column(String, index=True)
-    model = Column(String, index=True)
+
+    portal = Column(String)
+    brand = Column(String)
+    model = Column(String)
+    version = Column(String)
+    vehicle_status = Column(String, nullable=False, default="Dudoso")
+    vehicle_status_check = Column(String, nullable=False, default="Dudoso")
+
     year = Column(Integer)
-    mileage = Column(Integer)
+    kilometrage = Column(Integer)
+    mileage = Column(Integer) # Alias for kilometrage
+
+    fuel = Column(String)
+    power = Column(Integer)
+
     price = Column(Float)
+    currency = Column(String)
+
     country = Column(String)
+    location = Column(String)
+
     url = Column(String)
-    
-    images = relationship("CarImage", back_populates="car")
+    images = Column(JSON, default=[]) # Stored as ["url1", "url2"]
+
     inspections = relationship("InspectionRequest", back_populates="car")
 
-class CarImage(Base):
-    __tablename__ = "car_images"
 
-    id = Column(String, primary_key=True, index=True)
-    car_id = Column(String, ForeignKey("cars.id"))
-    image_url = Column(String)
+class CarPriceHistory(Base):
+    __tablename__ = "car_price_history"
 
-    car = relationship("Car", back_populates="images")
+    id = Column(Integer, primary_key=True, index=True)
+    brand = Column(String)
+    model = Column(String)
+    avg_price = Column(Float)
+    currency = Column(String, default="EUR")
+    sample_size = Column(Integer)
+    source = Column(String, default="coches.net")
+    created_at = Column(DateTime, server_default=func.now())
